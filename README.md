@@ -9,3 +9,8 @@ shadcn-ui
 clerk-auth 
 gemini-ai 
 dizzleorm
+
+
+
+
+npx drizzle-kit push

@@ -5,54 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/eslint.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/next.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/postcss.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/file.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/globe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/window.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/accordion.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/avatar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/dialog.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/input.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/label.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/navigation-menu.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/popover.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/progress.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/select.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/separator.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/sheet.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/sidebar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/skeleton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/switch.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/table.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/tabs.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/textarea.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/toggle.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/tooltip.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/hooks/use-mobile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/lib/utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tailwind.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/index.ts" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/schema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +25,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2qqflGw70p8eh226UBOpC78X2US" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -81,6 +47,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -99,7 +66,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735395178564</updated>
-      <workItem from="1735395182169" duration="1161000" />
+      <workItem from="1735395182169" duration="1989000" />
+      <workItem from="1735416442262" duration="2903000" />
     </task>
     <servers />
   </component>
