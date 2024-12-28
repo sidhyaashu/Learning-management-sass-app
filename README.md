@@ -14,3 +14,4 @@ dizzleorm
 
 
 npx drizzle-kit push
+npx drizzle-kit studio
