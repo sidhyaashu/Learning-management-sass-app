@@ -9,37 +9,46 @@ import { useEffect } from "react";
 const Provider = ({ children }) => {
     const { user } = useUser();
 
+
+    useEffect(() => {
+        user && CheckNewUser();
+    }, [user]);
+
     const CheckNewUser = async () => {
         try {
             const email = user?.primaryEmailAddress?.emailAddress;
             const name = user?.fullName;
 
             if (!email) {
-                console.warn("No email address available for user.");
+                console.log("Email is required!");
                 return;
             }
 
-            const existingUsers = await db
+            const result = await db
                 .select()
                 .from(USER_TABLE)
                 .where(eq(USER_TABLE.email, email));
 
-            if (existingUsers.length === 0) {
-                const newUser = await db
-                    .insert(USER_TABLE)
-                    .values({ name, email })
-                    .returning(USER_TABLE.id);
+            console.log(result);
 
-                console.log("Inserted User:", newUser);
+            if (result?.length == 0) {
+                const resultResponse = await db
+                    .insert(USER_TABLE)
+                    .values({
+                        name: name,
+                        email: email,
+                    })
+                    .returning({id: USER_TABLE.id});
+                console.log("Inserted User:", resultResponse);
             }
-        } catch (error) {
-            console.error("Error in CheckNewUser:", error.message, error.stack);
+
+        } catch (e) {
+            console.error(`Error in CheckNewUser: ${e.message} - Stack: ${e.stack}`);
         }
     };
 
-    useEffect(() => {
-        if (user) CheckNewUser();
-    }, [user?.primaryEmailAddress?.emailAddress]);
+
+
 
     return <>{children}</>;
 };

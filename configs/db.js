@@ -1,10 +1,14 @@
 import { drizzle } from 'drizzle-orm/neon-http';
+import { neon } from '@neondatabase/serverless';
+import 'dotenv/config';
 
-const connectionString = process.env.NEXT_PUBLIC_DATABASE_URL;
-console.log(`Connected to the database connection: ${connectionString}`);
 
-if (!connectionString) {
-    throw new Error("NEXT_PUBLIC_DATABASE_URL is not set in environment variables");
+const DATABASE_URL = process.env.NEXT_PUBLIC_DATABASE_CONNECTION
+
+if (!DATABASE_URL) {
+    throw new Error("DATABASE_URL is not set in environment variables");
 }
 
-export const db = drizzle(connectionString);
+const sql = neon(DATABASE_URL);
+
+export const db = drizzle({ client: sql })

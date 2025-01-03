@@ -62,6 +62,7 @@ Use Drizzle Kit for database migrations and management:
 
 - 📤 Push migrations:
   ```bash
+  npx drizzle-kit generate
   npx drizzle-kit push
   ```
 
