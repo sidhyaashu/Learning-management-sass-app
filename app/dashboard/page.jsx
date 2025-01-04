@@ -1,8 +1,11 @@
+import WelcomeBanner from "@/app/dashboard/_components/WelcomeBanner";
 
 
 function Dashboard(){
     return (
-        <div>Dashboard</div>
+        <div>
+            <WelcomeBanner/>
+        </div>
     )
 }
 
