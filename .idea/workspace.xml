@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/create-user/route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Provider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/create-user/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/create-user/route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/inngest/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/inngest/route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inngest/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/inngest/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,8 @@
       <workItem from="1735935402834" duration="5675000" />
       <workItem from="1735963363519" duration="1184000" />
       <workItem from="1735964646576" duration="604000" />
-      <workItem from="1735965357766" duration="4085000" />
+      <workItem from="1735965357766" duration="4242000" />
+      <workItem from="1735978070205" duration="1314000" />
     </task>
     <servers />
   </component>

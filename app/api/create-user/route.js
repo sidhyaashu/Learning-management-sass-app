@@ -5,7 +5,7 @@ export async function POST(req){
 
     const {user } = await  req.json()
     const result = await inngest.send({
-        name:"create-user",
+        name:"user.create",
         data:{
             user:user,
         }
