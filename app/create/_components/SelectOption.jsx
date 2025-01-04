@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 function SelectOption() {
     const Options = [
@@ -24,6 +27,13 @@ function SelectOption() {
         },
     ];
 
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const handleOptionClick = (optionName) => {
+        // Toggle selection to allow deselecting the option
+        setSelectedOption((prev) => (prev === optionName ? null : optionName));
+    };
+
     return (
         <div className="space-y-8">
             <h2 className="text-2xl font-semibold text-gray-800 text-center">
@@ -33,7 +43,13 @@ function SelectOption() {
                 {Options.map((option, index) => (
                     <div
                         key={index}
-                        className="group flex flex-col items-center justify-center bg-gradient-to-tr from-purple-100 to-pink-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300"
+                        className={`group flex flex-col items-center justify-center p-6 rounded-2xl shadow-lg transform transition-all duration-300 cursor-pointer 
+              ${
+                            selectedOption === option.name
+                                ? "bg-gradient-to-tr from-purple-400 to-pink-400 shadow-xl scale-105"
+                                : "bg-gradient-to-tr from-purple-100 to-pink-100 hover:shadow-xl hover:scale-105"
+                        }`}
+                        onClick={() => handleOptionClick(option.name)}
                     >
                         <div className="relative w-20 h-20 mb-4">
                             <Image
@@ -44,7 +60,13 @@ function SelectOption() {
                                 className="group-hover:scale-110 transition-transform duration-300"
                             />
                         </div>
-                        <h3 className="text-gray-900 font-medium text-lg group-hover:text-purple-700 transition-colors duration-300">
+                        <h3
+                            className={`text-lg font-medium ${
+                                selectedOption === option.name
+                                    ? "text-white"
+                                    : "text-gray-900 group-hover:text-purple-700"
+                            } transition-colors duration-300`}
+                        >
                             {option.name}
                         </h3>
                     </div>

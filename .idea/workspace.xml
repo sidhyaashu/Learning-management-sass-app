@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/create/_components/SelectOption.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/create/page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dashboard/_components/WelcomeBanner.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dashboard/profile/page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dashboard/upgrade/page.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/create/_components/TopicInput.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/SideBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/create/_components/SelectOption.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create/_components/SelectOption.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/create/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo.svg" afterDir="false" />
@@ -81,7 +76,7 @@
       <workItem from="1735963363519" duration="1184000" />
       <workItem from="1735964646576" duration="604000" />
       <workItem from="1735965357766" duration="4242000" />
-      <workItem from="1735978070205" duration="8676000" />
+      <workItem from="1735978070205" duration="11368000" />
     </task>
     <servers />
   </component>
