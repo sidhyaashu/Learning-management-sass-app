@@ -70,6 +70,9 @@ Use Drizzle Kit for database migrations and management:
   ```bash
   npx drizzle-kit studio
   ```
+  ```bash
+   npx inngest-cli@latest dev
+   ```
 
 ## 📂 Project Structure
 
