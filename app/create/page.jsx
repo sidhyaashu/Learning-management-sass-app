@@ -8,6 +8,7 @@ import { v4 as uuid } from "uuid";
 import axios from "axios";
 import {useUser} from "@clerk/nextjs"
 import {useRouter} from "next/navigation";
+import {toast} from "sonner";
 
 function Create() {
     const router = useRouter();
@@ -40,6 +41,8 @@ function Create() {
             });
             setLoading(false);
             router.replace("/dashboard")
+
+            toast("Your Course Content is Generating, Please Wait.")
         } catch (error) {
             console.error("API Call Error:", error.response?.data || error.message);
         }

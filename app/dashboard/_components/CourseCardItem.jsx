@@ -2,6 +2,7 @@ import Image from "next/image";
 import {Progress} from "@/components/ui/progress";
 import {Button} from "@/components/ui/button";
 import {RefreshCw} from "lucide-react";
+import Link from "next/link";
 
 
 function CourseCardItem({ course}) {
@@ -19,7 +20,9 @@ function CourseCardItem({ course}) {
                 </div>
 
                 <div className={`mt-3 flex justify-end`}>
-                    {course?.status === "Generating"?   <h2 className={`text-[12px] p-1 px-2 rounded-full flex gap-2 items-center text-sm bg-gray-400 text-white`}> <RefreshCw className={`h-5 w-5`} /> Generating...</h2> :<Button>View</Button>}
+                    {course?.status === "Generating"?   <h2 className={`text-[12px] p-1 px-2 rounded-full flex gap-2 items-center text-sm bg-gray-400 text-white`}> <RefreshCw className={`h-5 w-5`} /> Generating...</h2> :<Link href={`/course/${course?.courseId}`}>
+                        <Button>View</Button> </Link>
+                    }
                 </div>
 
             </div>
