@@ -28,10 +28,9 @@ export async function POST(req) {
         const noteGenerateNote = await inngest.send({
             name: "notes.generate",
             data:{
-                course:dbResult[0]
+                course:dbResult[0]?.resp
             }
         })
-        console.log(dbResult[0])
 
         return NextResponse.json({ result: dbResult[0] });
     } catch (error) {

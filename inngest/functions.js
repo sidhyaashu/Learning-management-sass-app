@@ -60,15 +60,12 @@ export const GenerateNotes = inngest.createFunction(
         // Generate notes for each chapter
         const notesResult = await step.run("Generate Chapter Notes", async () => {
             try {
-                const Chapters = course?.resp?.courseLayout?.chapters || [];
-                console.log(`Starting notes generation for course: ${Chapters}`);
-                if (Chapters.length === 0) {
-                    console.log("No chapters found for the course.");
-                    return "no chapters";
-                }
 
-                await Promise.all(
-                    Chapters.map(async (chapter, index) => {
+                const noteResult = await step.run('Generate Chapter Notes',async () => {
+                    const Chapters = course?.resp?.courseLayout?.chapters;
+                    let index = 0;
+
+                    Chapters.forEach(async(chapter)=>{
                         const PROMPT = `Generate exam material detailed content for the chapter. Include all topic points in HTML format (without HTML, Head, Body, Title tags). Chapter details: ${JSON.stringify(chapter)}`;
                         const result = await generateNotesAiModel.sendMessage(PROMPT);
                         const aiResponse = await result.response.text();
@@ -79,8 +76,9 @@ export const GenerateNotes = inngest.createFunction(
                             notes: aiResponse,
                         });
 
+                        index = index + 1;
                     })
-                );
+                });
 
                 return "completed";
             } catch (error) {
@@ -99,7 +97,6 @@ export const GenerateNotes = inngest.createFunction(
 
                 return "success";
             } catch (error) {
-                console.error(`Error in updating course status: ${error.message}`, error.stack);
                 throw new Error("Failed to update course status");
             }
         });

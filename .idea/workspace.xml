@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/study-type/route.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/ChapterList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/CourseIntroCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/StudyMaterialSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/notes/page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/course/layout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/generate-course-outline/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/generate-course-outline/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/study-type/route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/study-type/route.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/notes/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/notes/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/course/[courseId]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/DashBoardHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/DashBoardHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inngest/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/inngest/functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,8 @@
       <workItem from="1735978070205" duration="11800000" />
       <workItem from="1736050329376" duration="10378000" />
       <workItem from="1736070426836" duration="11429000" />
-      <workItem from="1736085559442" duration="9158000" />
+      <workItem from="1736085559442" duration="9202000" />
+      <workItem from="1736103257044" duration="5760000" />
     </task>
     <servers />
   </component>

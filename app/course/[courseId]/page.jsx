@@ -22,9 +22,10 @@ function ViewCourse() {
         setLoading(true);
         const result = await axios.get(`/api/courses?courseId=${courseId}`);
         setCourse(result.data.result);
-        console.log(result.data.result);
         setLoading(false);
     };
+
+    console.log(course)
 
     return (
         <div className="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen text-white">

@@ -12,14 +12,14 @@ function ViewNotes(){
     const [stepCount, setStepCount] = useState(0);
 
     const GetNotes = async()=>{
-        const notes = await axios.post("/api/study-type",{
+        const result = await axios.post("/api/study-type",{
             courseId: courseId,
             studyType:"notes"
         })
-
-        console.log(notes?.data[stepCount]?.notes)
-        setNotes(notes?.data)
+        setNotes(result?.data)
+        console.log(result?.data)
     }
+
 
     useEffect(()=>{
         GetNotes();
@@ -36,7 +36,7 @@ function ViewNotes(){
             </div>
 
             <div>
-                <div dangerouslySetInnerHTML={{__html:notes[stepCount]?.notes}} />
+                <div dangerouslySetInnerHTML={{__html:notes[stepCount]?.notes }} />
             </div>
         </div>
     )
