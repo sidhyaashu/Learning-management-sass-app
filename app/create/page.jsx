@@ -7,6 +7,16 @@ import TopicInput from "@/app/create/_components/TopicInput";
 
 function Create() {
     const [step, setStep] = useState(0);
+    const [formData, setFormData] = useState([])
+    const handleUserInput =(fieldName,fieldValue)=>{
+        setFormData(prev=>({
+            ...prev,
+            [fieldName]:fieldValue
+        }))
+
+
+        console.log(formData)
+    }
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#6C63FF] via-[#6B5B95] to-[#FF6F91] flex flex-col items-center justify-center p-6">
@@ -18,7 +28,7 @@ function Create() {
                     Welcome to our AI-powered platform! Start creating your tailored
                     learning resources for exams, coding prep, interviews, and more.
                 </p>
-                <div>{step === 0 ? <SelectOption /> : <TopicInput/>}</div>
+                <div>{step === 0 ? <SelectOption selectedStudyType={(value)=>handleUserInput('studyType',value)} /> : <TopicInput setTopic={(value)=>handleUserInput('topic',value)} setDifficulty={(value)=>handleUserInput('difficualtyLevel',value)}/>}</div>
             </div>
 
             {/* Button Container */}

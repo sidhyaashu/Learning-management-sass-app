@@ -20,7 +20,7 @@ const WelcomeBanner = () => {
                     learning smarter, faster, and more engaging.
                 </p>
                 <div className="flex space-x-4">
-                    <Link href={"/create"} className="bg-white text-indigo-600 hover:bg-gray-100">
+                    <Link href={"/create"} className="bg-white text-indigo-600 hover:bg-gray-100 p-2 rounded-xl">
                         Get Started
                     </Link>
                 </div>

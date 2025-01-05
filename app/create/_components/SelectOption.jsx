@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function SelectOption() {
+function SelectOption({selectedStudyType}) {
     const Options = [
         {
             name: "Exam Prep",
@@ -49,7 +49,10 @@ function SelectOption() {
                                 ? "bg-gradient-to-tr from-purple-400 to-pink-400 shadow-xl scale-105"
                                 : "bg-gradient-to-tr from-purple-100 to-pink-100 hover:shadow-xl hover:scale-105"
                         }`}
-                        onClick={() => handleOptionClick(option.name)}
+                        onClick={() => {
+                            handleOptionClick(option.name);
+                            selectedStudyType(option.name);
+                        }}
                     >
                         <div className="relative w-20 h-20 mb-4">
                             <Image

@@ -1,15 +1,15 @@
 "use client";
 
-import { Textarea } from "@/@/components/ui/textarea";
+import { Textarea } from "@/components/ui/textarea";
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/@/components/ui/select";
+} from "@/components/ui/select";
 
-function TopicInput() {
+function TopicInput({setTopic,setDifficulty}) {
     return (
         <div className="p-6 max-w-3xl mx-auto bg-white rounded-3xl">
             {/* Title */}
@@ -25,7 +25,8 @@ function TopicInput() {
                 <Textarea
                     placeholder="Write your topic details here..."
                     className="w-full p-4 text-gray-700 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300"
-                />
+                    onChange={(e) => setTopic(e.target.value)}
+                  />
             </div>
 
             {/* Select Section */}
@@ -33,7 +34,7 @@ function TopicInput() {
                 <label className="block text-lg font-medium text-gray-700">
                     Select the difficulty level:
                 </label>
-                <Select>
+                <Select onValueChange={(value)=>setDifficulty(value)}>
                     <SelectTrigger className="w-full p-4 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-200 focus:ring-2 focus:ring-purple-500 focus:outline-none transition-all duration-300">
                         <SelectValue placeholder="Choose Difficulty Level" />
                     </SelectTrigger>
