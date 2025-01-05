@@ -40,19 +40,19 @@ function TopicInput({setTopic,setDifficulty}) {
                     </SelectTrigger>
                     <SelectContent className="bg-white border border-gray-300 rounded-lg shadow-lg w-full">
                         <SelectItem
-                            value="easy"
+                            value="Easy"
                             className="p-3 text-gray-700 hover:bg-purple-100 rounded-lg transition-all cursor-pointer"
                         >
                             Easy
                         </SelectItem>
                         <SelectItem
-                            value="moderate"
+                            value="Moderate"
                             className="p-3 text-gray-700 hover:bg-purple-100 rounded-lg transition-all cursor-pointer"
                         >
                             Intermediate
                         </SelectItem>
                         <SelectItem
-                            value="hard"
+                            value="Hard"
                             className="p-3 text-gray-700 hover:bg-purple-100 rounded-lg transition-all cursor-pointer"
                         >
                             Advanced
