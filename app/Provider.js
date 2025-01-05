@@ -16,7 +16,6 @@ const Provider = ({ children }) => {
     const checkNewUser = async () => {
         try {
             const response = await axios.post("/api/create-user", { user });
-            console.log("API Response:", response.data);
         } catch (error) {
             console.error("Error in CheckNewUser:", error.message);
         }

@@ -4,20 +4,20 @@ const {
     HarmBlockThreshold,
 } = require("@google/generative-ai");
 
-const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(apiKey);
+    const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+    const genAI = new GoogleGenerativeAI(apiKey);
 
-const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
-});
+    const model = genAI.getGenerativeModel({
+        model: "gemini-1.5-flash",
+    });
 
-const generationConfig = {
-    temperature: 1,
-    topP: 0.95,
-    topK: 40,
-    maxOutputTokens: 8192,
-    responseMimeType: "application/json",
-};
+    const generationConfig = {
+        temperature: 1,
+        topP: 0.95,
+        topK: 40,
+        maxOutputTokens: 8192,
+        responseMimeType: "application/json",
+    };
 
 
     export const courseOutlineAIModel = model.startChat({
@@ -38,6 +38,20 @@ const generationConfig = {
         ],
     });
 
-    // const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
-    // console.log(result.response.text());
-
+    export const generateNotesAiModel = model.startChat({
+        generationConfig,
+        history: [
+            {
+                role: "user",
+                parts: [
+                    {text: "Generate exam material detail content for each chapter, make sure to includes all topic point in the content, make sure to give content in HTML format(do not add HTMLKL,Head,Body,title tag), Then chapters:{\n      \"chapterNumber\": 1,\n      \"chapterTitle\": \"Introduction to Python\",\n      \"topics\": [\n        \"What is Python and its uses?\",\n        \"Basic syntax: Indentation, comments, keywords\",\n        \"Variables and data types: Integers, floats, strings, booleans\"\n      ]\n    }"},
+                ],
+            },
+            {
+                role: "model",
+                parts: [
+                    {text: "```html\n<h1>Chapter 1: Introduction to Python</h1>\n\n<h2>1.1 What is Python and its uses?</h2>\n<p>This section covers the fundamental aspects of Python.  Students should be able to define Python, describe its characteristics (e.g., interpreted, high-level, general-purpose), and provide examples of its diverse applications across various domains, including (but not limited to): web development, data science, machine learning, scripting, automation, and game development.  The exam will assess understanding through short answer questions and potential scenario-based questions where students need to identify the appropriate use of Python for a given task.</p>\n\n<h2>1.2 Basic syntax: Indentation, comments, keywords</h2>\n<p>This section focuses on the core syntactic elements of Python. Students should be able to:</p>\n<ul>\n  <li>Explain the significance of indentation in Python and its role in defining code blocks.</li>\n  <li>Write and identify single-line and multi-line comments effectively.</li>\n  <li>Recognize and define the purpose of common Python keywords (e.g., <code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>, <code>def</code>, <code>return</code>, <code>import</code>, etc.).  The exam may include questions that require identifying correct or incorrect indentation, writing comments to explain code snippets, or determining the function of given keywords within code examples.</li>\n</ul>\n\n<h2>1.3 Variables and data types: Integers, floats, strings, booleans</h2>\n<p>This section covers fundamental data types and variable handling. Students should be able to:</p>\n<ul>\n  <li>Declare and initialize variables of different data types (integer, float, string, boolean).</li>\n  <li>Understand the differences between these data types and their appropriate uses.</li>\n  <li>Perform basic operations (e.g., arithmetic, concatenation, comparison) on variables of different data types.  The exam will include questions requiring variable declarations, type identification, and the correct application of operations based on data types.  Expect code snippets that need to be analyzed or corrected based on data type usage.  Questions on type conversion (casting) may also be included.</li>\n</ul>\n```\n"},
+                ],
+            },
+        ],
+    });

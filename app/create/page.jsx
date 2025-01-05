@@ -20,9 +20,6 @@ function Create() {
             ...prev,
             [fieldName]:fieldValue
         }))
-
-
-        console.log(formData)
     }
 
     // Used to save user input and generate Ai course layout
@@ -41,7 +38,6 @@ function Create() {
                 ...formData,
                 createdBy: user?.primaryEmailAddress?.emailAddress,
             });
-            console.log(result.data.result.resp);
             setLoading(false);
             router.replace("/dashboard")
         } catch (error) {

@@ -19,7 +19,6 @@ function CourseList() {
             createdBy:user?.primaryEmailAddress?.emailAddress
         })
         setCourseList(result.data.result)
-        console.log(result)
     }
 
     return (

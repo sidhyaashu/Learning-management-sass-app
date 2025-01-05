@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/configs/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Provider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Provider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/generate-course-outline/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/generate-course-outline/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/inngest/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/inngest/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/create/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/CourseList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/AiModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/AiModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inngest/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/inngest/functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +79,7 @@
       <workItem from="1735965357766" duration="4242000" />
       <workItem from="1735978070205" duration="11800000" />
       <workItem from="1736050329376" duration="10378000" />
-      <workItem from="1736070426836" duration="3234000" />
+      <workItem from="1736070426836" duration="8610000" />
     </task>
     <servers />
   </component>
