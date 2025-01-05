@@ -30,7 +30,7 @@ export async function POST(req) {
             topic,
             difficultyLevel: difficualtyLevel,
             courseLayout: aiResult,
-        }).returning({ STUDY_MATERIAL_TABLE });
+        }).returning({ resp: STUDY_MATERIAL_TABLE });
 
         return NextResponse.json({ result: dbResult[0] });
     } catch (error) {

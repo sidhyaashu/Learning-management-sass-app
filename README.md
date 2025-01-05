@@ -72,6 +72,7 @@ Use Drizzle Kit for database migrations and management:
   ```
   ```bash
    npx inngest-cli@latest dev
+  npx inngest-cli@latest dev --no-discovery -u http://localhost:3000/api/inngest
    ```
 
 ## 📂 Project Structure

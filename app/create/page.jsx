@@ -7,11 +7,14 @@ import TopicInput from "@/app/create/_components/TopicInput";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
 import {useUser} from "@clerk/nextjs"
+import {useRouter} from "next/navigation";
 
 function Create() {
+    const router = useRouter();
     const { user } = useUser()
     const [step, setStep] = useState(0);
     const [formData, setFormData] = useState([])
+    const [loading,setLoading] = useState(false);
     const handleUserInput =(fieldName,fieldValue)=>{
         setFormData(prev=>({
             ...prev,
@@ -32,12 +35,15 @@ function Create() {
         const courseId = uuid();
 
         try {
+            setLoading(true);
             const result = await axios.post("/api/generate-course-outline", {
                 courseId,
                 ...formData,
                 createdBy: user?.primaryEmailAddress?.emailAddress,
             });
-            console.log("API Response:", result.data);
+            console.log(result.data.result.resp);
+            setLoading(false);
+            router.replace("/dashboard")
         } catch (error) {
             console.error("API Call Error:", error.response?.data || error.message);
         }
@@ -74,6 +80,7 @@ function Create() {
                     </Button> : <Button
                         className="flex-1 py-3 px-6 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold text-lg rounded-full shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none"
                         onClick={GenerateCourseOutLine}
+                        disabled={loading}
                     >
                         Generate
                     </Button>
