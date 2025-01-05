@@ -6,7 +6,7 @@ import { useState } from "react";
 function SelectOption({selectedStudyType}) {
     const Options = [
         {
-            name: "Exam Prep",
+            name: "Exam Preparation",
             icon: "/exam_1.png",
         },
         {
@@ -18,7 +18,7 @@ function SelectOption({selectedStudyType}) {
             icon: "/practice.png",
         },
         {
-            name: "Coding Prep",
+            name: "Coding Preparation",
             icon: "/code.png",
         },
         {

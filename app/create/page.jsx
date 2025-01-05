@@ -23,15 +23,25 @@ function Create() {
     }
 
     // Used to save user input and generate Ai course layout
-    const GenerateCourseOutLine =async () =>{
-            const result = await axios.post("/api/generate-course-outline",{
-                courseId:uuid(),
-                ...formData,
-                createdBy:user?.primaryEmailAddress?.emailAddress
-            })
+    const GenerateCourseOutLine = async () => {
+        if (!formData.courseType || !formData.topic) {
+            console.error("Missing required fields in formData");
+            return;
+        }
 
-        console.log(result)
-    }
+        const courseId = uuid();
+
+        try {
+            const result = await axios.post("/api/generate-course-outline", {
+                courseId,
+                ...formData,
+                createdBy: user?.primaryEmailAddress?.emailAddress,
+            });
+            console.log("API Response:", result.data);
+        } catch (error) {
+            console.error("API Call Error:", error.response?.data || error.message);
+        }
+    };
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#6C63FF] via-[#6B5B95] to-[#FF6F91] flex flex-col items-center justify-center p-6">
@@ -56,7 +66,7 @@ function Create() {
                     Previous
                 </Button>
                 {
-                    step ? <Button
+                    step === 0 ? <Button
                         className="flex-1 py-3 px-6 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold text-lg rounded-full shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none"
                         onClick={() => setStep((prev) => prev + 1)}
                     >

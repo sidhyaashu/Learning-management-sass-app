@@ -1,37 +1,40 @@
-import {NextResponse} from "next/server";
 import {courseOutlineAIModel} from "@/configs/AiModel";
+import {NextResponse} from "next/server";
+import { STUDY_MATERIAL_TABLE } from "@/configs/schema"
 import {db} from "@/configs/db";
-import {STUDY_MATERIAL_TABLE} from "@/configs/schema";
 
+export async function POST(req) {
+    try {
+        const { courseId, topic, courseType, difficualtyLevel, createdBy } = await req.json();
 
-export async function POST(req){
+        // if (!courseId || !topic || !courseType || !difficualtyLevel || !createdBy) {
+        //     return NextResponse.json({ message: "All fields are required" }, { status: 400 });
+        // }
 
-    const { courseId,topic,courseType,difficualtyLevel,createdBy } = await req.json()
-    if (!courseId && !topic && !courseType && !difficualtyLevel && !createdBy) {
-        return NextResponse.json({message:"All field required"})
+        const PROMPT = `Generate a study material for ${topic} for ${courseType} and level of difficulty will be ${difficualtyLevel} with summary of course. List of chapters, Topic list in each chapter in JSON format`;
+
+        // Generate Course Layout Using AI
+        const aiResponse = await courseOutlineAIModel.sendMessage(PROMPT);
+        // if (!aiResponse || aiResponse.response.status !== 200) {
+        //     console.error("AI model API error:", aiResponse);
+        //     return NextResponse.json({ message: "AI model failed to respond" }, { status: 500 });
+        // }
+            console.log("AI model API reponse:", aiResponse);
+            const aiResult = JSON.parse(aiResponse.response.text());
+
+        // Uncomment below once database insertion is implemented
+        const dbResult = await db.insert(STUDY_MATERIAL_TABLE).values({
+            courseId,
+            courseType,
+            createdBy,
+            topic,
+            difficultyLevel: difficualtyLevel,
+            courseLayout: aiResult,
+        }).returning({ STUDY_MATERIAL_TABLE });
+
+        return NextResponse.json({ result: dbResult[0] });
+    } catch (error) {
+        console.error("Error in POST handler:", error);
+        return NextResponse.json({ message: "Internal Server Error" });
     }
-
-    const PROMPT = `Generate a study material for ${topic} for ${courseType} and level of difficulty will be ${difficualtyLevel} with summery of course.
-    List of chapter, Topic list in each chapter in JSON format`
-
-    // Generate Course Layout Using AI
-    const aiResponse = await courseOutlineAIModel.sendMessage(PROMPT)
-    const aiResult = JSON.parse(aiResponse.response.text())
-
-
-    // Save the result to the database
-    const dbResult = await db.insert(STUDY_MATERIAL_TABLE).values({
-        courseId: courseId,
-        courseType: courseType,
-        createdBy: createdBy,
-        topic: topic,
-        difficultyLevel:difficualtyLevel,
-        courseLayout:aiResult,
-
-    }).returning({STUDY_MATERIAL_TABLE})
-
-    console.log(dbResult)
-
-
-    return NextResponse.json({result: dbResult[0]})
 }
