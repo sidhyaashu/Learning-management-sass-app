@@ -1,15 +1,12 @@
 import DashboardHeader from "@/app/dashboard/_components/DashBoardHeader";
 
-function CourseViewLayout({children}) {
+function CourseViewLayout({ children }) {
     return (
-        <div>
+        <div className="min-h-screen bg-gray-900 text-gray-300">
             <DashboardHeader title="Dashboard" />
-            <div>
-                {children}
-            </div>
+            <div className="p-6">{children}</div>
         </div>
-    )
+    );
 }
 
 export default CourseViewLayout;
-

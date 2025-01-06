@@ -1,63 +1,69 @@
-"use client"
+"use client";
 
 import MaterialCardItem from "@/app/course/[courseId]/_components/MaterialCardItem";
 import axios from "axios";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-
-function StudyMaterialSection({ courseId ,course}) {
+function StudyMaterialSection({ courseId, course }) {
     const MaterialList = [
         {
             name: "Notes/Chapters",
             description: "Notes for Chapters",
             icon: '/notes.png',
             path: '/notes',
-            type:'notes'
+            type: 'notes'
         },
         {
             name: "FlashCard",
             description: "Flashcards for Chapters",
             icon: '/flashcard.png',
             path: '/flashcard',
-            type:'flashcard'
+            type: 'flashcard'
         },
         {
             name: "Quiz",
             description: "Quiz for Chapters",
             icon: '/quiz.png',
             path: '/quiz',
-            type:'quiz'
+            type: 'quiz'
         },
         {
             name: "Q&A",
             description: "Q&A for Chapters",
             icon: '/qa.png',
             path: '/qa',
-            type:'qa'
+            type: 'qa'
         },
     ];
-    const [ studyTypeContent,setStudyTypeContent ] = useState();
+    const [studyTypeContent, setStudyTypeContent] = useState();
     const [loading, setLoading] = useState(false);
 
-    const GetStudyMaterial = async() => {
+    const GetStudyMaterial = async () => {
         setLoading(true);
-        const result = await axios.post('/api/study-type',{
+        const result = await axios.post('/api/study-type', {
             courseId,
-            studyType:'ALL'
-        })
-        setStudyTypeContent(result?.data)
+            studyType: 'ALL'
+        });
+        setStudyTypeContent(result?.data);
         setLoading(false);
-    }
+    };
 
     useEffect(() => {
-        GetStudyMaterial()
-    },[])
+        GetStudyMaterial();
+    }, []);
+
     return (
         <div className="mt-10">
-            <h2 className="text-2xl font-bold text-center mb-5">Study Material</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+            <h2 className="text-2xl font-bold text-gray-100 text-center mb-5">Study Material</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {MaterialList.map((item, index) => (
-                        <MaterialCardItem key={index}  item={item} course={course} courseId={courseId} studyTypeContent={studyTypeContent} />
+                    <MaterialCardItem
+                        key={index}
+                        item={item}
+                        course={course}
+                        courseId={courseId}
+                        studyTypeContent={studyTypeContent}
+                    />
                 ))}
             </div>
         </div>

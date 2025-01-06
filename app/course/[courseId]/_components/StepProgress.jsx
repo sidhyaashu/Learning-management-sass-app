@@ -1,18 +1,38 @@
-import {Button} from "@/components/ui/button";
+"use client";
 
-function StepProgress({stepCount,data,setStepCount}) {
+import { Button } from "@/components/ui/button";
+
+function StepProgress({ stepCount, data, setStepCount }) {
     return (
-        <div className={`flex gap-5 items-center`}>
-            {stepCount !== 0 &&
-                <Button variant="outline" size="sm" onClick={() => setStepCount(stepCount - 1)}>Previous</Button>}
+        <div className="flex gap-5 items-center">
+            {stepCount !== 0 && (
+                <Button
+                    variant="outline"
+                    size="sm"
+                    className="text-white border-gray-600 hover:bg-gray-700"
+                    onClick={() => setStepCount(stepCount - 1)}
+                >
+                    Previous
+                </Button>
+            )}
             {data?.map((item, index) => (
-                <div key={index}
-                     className={`w-full h-2 rounded-full ${index < stepCount ? 'bg-primary' : 'bg-gray-200'}`}>
-                </div>
+                <div
+                    key={index}
+                    className={`w-full h-2 rounded-full transition-all duration-300 ${
+                        index < stepCount ? "bg-blue-500" : "bg-gray-600"
+                    }`}
+                ></div>
             ))}
-            <Button variant="outline" onClick={() => setStepCount(stepCount + 1)} size="sm">Next</Button>
+            <Button
+                variant="outline"
+                size="sm"
+                className="text-white border-gray-600 hover:bg-gray-700"
+                onClick={() => setStepCount(stepCount + 1)}
+            >
+                Next
+            </Button>
         </div>
-    )
+    );
 }
 
 export default StepProgress;

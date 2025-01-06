@@ -28,7 +28,7 @@ function CourseList() {
 
     return (
         <div className={`mt-10`}>
-            <h2 className={`font-bold text-2xl flex justify-between items-center`}> Your study materials <Button variant="outline" onClick={GetCourseList} className={`border-primary`} > <RefreshCw/> Refresh</Button> </h2>
+            <h2 className={`font-bold text-2xl flex justify-between items-center`}> Your study materials <Button variant="outline" onClick={GetCourseList} className={`border-primary text-black hover:bg-gray-500` } > <RefreshCw className={`text-black `}/> Refresh</Button> </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mt-2 gap-5">
                 {loading == false ? courseList?.map((course,index)=>(

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useParams } from "next/navigation";
 import axios from "axios";
@@ -26,15 +26,10 @@ function ViewCourse() {
     };
 
     return (
-        <div className="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen text-white">
-            <div className="mx-5 md:mx-20 lg:mx-40 xl:mx-60 p-5 rounded-lg bg-white bg-opacity-10 shadow-lg">
-                {/* Course Intro */}
+        <div className="min-h-screen bg-gray-900 text-gray-300">
+            <div className="mx-auto max-w-6xl p-6 bg-gray-800 rounded-lg shadow-lg">
                 <CourseIntroCard course={course} />
-
-                {/* Study Material Options */}
                 <StudyMaterialSection courseId={courseId} course={course} />
-
-                {/* Chapter List */}
                 <ChapterList course={course} />
             </div>
         </div>
