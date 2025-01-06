@@ -21,8 +21,8 @@ export async function POST(req){
         const result ={
             notes:notes_all,
             flashCard:contentList?.find(item=>item.type === "flashcard"),
-            quiz:null,
-            qa:null
+            quiz:contentList?.find(item=>item.type === "quiz"),
+            qa:contentList?.find(item=>item.type === "qa")
         }
 
         return NextResponse.json(result)
@@ -37,6 +37,6 @@ export async function POST(req){
         const result_t = await db.select().from(STUDY_TYPE_CONTENT_TABLE)
             .where(and(eq(STUDY_TYPE_CONTENT_TABLE?.courseId,courseId),eq(STUDY_TYPE_CONTENT_TABLE?.type,studyType)))
 
-        return NextResponse.json(result_t[0])
+        return NextResponse.json(result_t[0] ?? [])
     }
 }

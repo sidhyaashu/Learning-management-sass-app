@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/flashcard/_components/FlashCardItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/flashcard/page.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/StepProgress.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/quiz/_components/QuizCardItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/quiz/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/generate-study-type-content/route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/generate-study-type-content/route.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/study-type/route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/study-type/route.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/StudyMaterialSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/StudyMaterialSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/AiModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/AiModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inngest/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/inngest/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,7 @@
       <workItem from="1736085559442" duration="9202000" />
       <workItem from="1736103257044" duration="5790000" />
       <workItem from="1736133820407" duration="12200000" />
-      <workItem from="1736157861929" duration="5482000" />
+      <workItem from="1736157861929" duration="8090000" />
     </task>
     <servers />
   </component>
