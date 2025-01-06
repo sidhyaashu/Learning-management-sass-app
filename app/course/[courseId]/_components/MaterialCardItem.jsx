@@ -1,7 +1,30 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import axios from "axios";
+import {useState} from "react";
 
-function MaterialCardItem({ item ,studyTypeContent}) {
+function MaterialCardItem({ item ,studyTypeContent,course}) {
+    const [ loading, setLoading ] = useState(false);
+
+
+    const GenerateContent =async ()=>{
+        setLoading(true);
+        let chapters = ''
+        course?.courseLayout?.chapters.forEach((chapter)=>{
+            chapters = (chapter.chapterTitle || chapter.chapter_title)+','+ chapters
+        })
+        const result = await axios.post("/api/study-type",{
+            courseId:course?.courseId,
+            type:item.name,
+            chapters:chapters,
+        });
+
+        console.log(result);
+        setLoading(false);
+    }
+
     return (
         <div className={`bg-white bg-opacity-20 p-5 rounded-lg shadow-lg flex flex-col items-center text-center gap-2 ${studyTypeContent?.[item.type]?.length == null && 'grayscale'}`}>
             {
@@ -16,7 +39,7 @@ function MaterialCardItem({ item ,studyTypeContent}) {
 
             {
                 studyTypeContent?.[item.type]?.length == null
-                    ? <Button className="bg-gradient-to-r from-gray-400 to-blue-500 text-white px-4 py-2 rounded-lg">Generate</Button>
+                    ? <Button className="bg-gradient-to-r from-gray-400 to-blue-500 text-white px-4 py-2 rounded-lg" onClick={()=>GenerateContent()}>Generate</Button>
                     : <Button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-lg">View</Button>
             }
 

@@ -16,8 +16,9 @@ function ViewNotes(){
             courseId: courseId,
             studyType:"notes"
         })
+
+        console.log(result?.data);
         setNotes(result?.data)
-        console.log(result?.data)
     }
 
 

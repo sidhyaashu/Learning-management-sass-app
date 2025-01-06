@@ -25,8 +25,6 @@ function ViewCourse() {
         setLoading(false);
     };
 
-    console.log(course)
-
     return (
         <div className="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen text-white">
             <div className="mx-5 md:mx-20 lg:mx-40 xl:mx-60 p-5 rounded-lg bg-white bg-opacity-10 shadow-lg">
@@ -34,7 +32,7 @@ function ViewCourse() {
                 <CourseIntroCard course={course} />
 
                 {/* Study Material Options */}
-                <StudyMaterialSection courseId={courseId} />
+                <StudyMaterialSection courseId={courseId} course={course} />
 
                 {/* Chapter List */}
                 <ChapterList course={course} />

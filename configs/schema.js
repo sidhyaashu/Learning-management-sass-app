@@ -24,3 +24,12 @@ export const CHAPTER_NOTES_TABLE = pgTable("chapterNotes", {
     chapterId:integer('chapterId').notNull(),
     notes:text('notes'),
 })
+
+
+export const STUDY_TYPE_CONTENT_TABLE = pgTable('studyTypeContent',{
+    id: serial('id').primaryKey(),
+    courseId:varchar('courseId').notNull(),
+    content:json("content"),
+    type:varchar('type').notNull(),
+    status:varchar('status').default("Generating"),
+})

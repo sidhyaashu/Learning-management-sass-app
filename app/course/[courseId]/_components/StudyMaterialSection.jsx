@@ -5,7 +5,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import Link from "next/link";
 
-function StudyMaterialSection({ courseId }) {
+function StudyMaterialSection({ courseId ,course}) {
     const MaterialList = [
         {
             name: "Notes/Chapters",
@@ -45,8 +45,6 @@ function StudyMaterialSection({ courseId }) {
             courseId,
             studyType:'ALL'
         })
-
-        console.log(result)
         setStudyTypeContent(result?.data)
         setLoading(false);
     }
@@ -59,8 +57,8 @@ function StudyMaterialSection({ courseId }) {
             <h2 className="text-2xl font-bold text-center mb-5">Study Material</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
                 {MaterialList.map((item, index) => (
-                    <Link href={`/course/${courseId}/${item.path}`}>
-                        <MaterialCardItem key={index} item={item} studyTypeContent={studyTypeContent} />
+                    <Link key={index} href={`/course/${courseId}/${item.path}` }>
+                        <MaterialCardItem  item={item} course={course} studyTypeContent={studyTypeContent} />
                     </Link>
                 ))}
             </div>

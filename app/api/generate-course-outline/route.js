@@ -24,11 +24,13 @@ export async function POST(req) {
             courseLayout: aiResult,
         }).returning({ resp: STUDY_MATERIAL_TABLE });
 
+        console.log(`From generate course outline api - : ${dbResult[0]}`);
+
         //Trigger the ingest to generate chapter notes
         const noteGenerateNote = await inngest.send({
             name: "notes.generate",
             data:{
-                course:dbResult[0]?.resp
+                course:dbResult[0]
             }
         })
 

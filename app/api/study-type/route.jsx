@@ -8,12 +8,12 @@ export async function POST(req){
     const { courseId, studyType} = await req.json()
 
     if(studyType == "ALL"){
-        const notes = await db.select().from(CHAPTER_NOTES_TABLE)
+        const notes_all = await db.select().from(CHAPTER_NOTES_TABLE)
             .where(eq(CHAPTER_NOTES_TABLE?.courseId,courseId))
 
         // Get all the other study types record
         const result ={
-            notes:notes,
+            notes:notes_all,
             flashCard:null,
             quiz:null,
             qa:null
