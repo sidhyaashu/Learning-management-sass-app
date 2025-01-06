@@ -3,20 +3,24 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
-import {useState} from "react";
+import {useState,useEffect} from "react";
 
-function MaterialCardItem({ item ,studyTypeContent,course}) {
+function MaterialCardItem({ item ,studyTypeContent,course,courseId}) {
     const [ loading, setLoading ] = useState(false);
+    useEffect(()=>{
+        console.log(`item ${item}`);
+        console.log(`studyTypeContent ${studyTypeContent}`);
+        console.log(`Course ID ${courseId}`);
+    },[])
 
-
-    const GenerateContent =async ()=>{
+    const GenerateContent = async ()=>{
         setLoading(true);
         let chapters = ''
         course?.courseLayout?.chapters.forEach((chapter)=>{
             chapters = (chapter.chapterTitle || chapter.chapter_title)+','+ chapters
         })
-        const result = await axios.post("/api/study-type",{
-            courseId:course?.courseId,
+        const result = await axios.post("/api/generate-study-type-content",{
+            courseId:courseId,
             type:item.name,
             chapters:chapters,
         });

@@ -2,7 +2,7 @@ import { inngest } from "./client";
 import { db } from "@/configs/db";
 import {CHAPTER_NOTES_TABLE, STUDY_MATERIAL_TABLE, STUDY_TYPE_CONTENT_TABLE, USER_TABLE} from "@/configs/schema";
 import { eq } from "drizzle-orm";
-import { generateNotesAiModel,generateStudyTypeContentAiModel } from "@/configs/AiModel";
+import {generateNotesAiModel, generateQuizAiModel, generateStudyTypeContentAiModel} from "@/configs/AiModel";
 
 export const CreateNewUser = inngest.createFunction(
     { id: "create-user" },
@@ -115,14 +115,15 @@ export const GenerateStudyTypeContent = inngest.createFunction(
     async ({ event, step }) => {
         const { studyType,prompt,courseId ,recordId} = event.data;
 
-        const FlashCardResult = await step.run("Generating Flashcard using AI", async () => {
-                const result = await generateStudyTypeContentAiModel.sendMessage(prompt)
-            const aiResponse_f =JSON.parse( await result.response.text());
 
+            const airesult = await step.run("Generating Flashcard using AI", async () => {
+                const result = studyType === "flashcard"?
+                    await generateStudyTypeContentAiModel.sendMessage(prompt) :
+                    await generateQuizAiModel.sendMessage(prompt);
+                const aiResponse_f =JSON.parse( await result.response.text());
                 return aiResponse_f;
+            })
 
-
-        })
 
         // Insert into db
 

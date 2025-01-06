@@ -3,7 +3,7 @@
 import MaterialCardItem from "@/app/course/[courseId]/_components/MaterialCardItem";
 import axios from "axios";
 import {useEffect, useState} from "react";
-import Link from "next/link";
+
 
 function StudyMaterialSection({ courseId ,course}) {
     const MaterialList = [
@@ -57,9 +57,7 @@ function StudyMaterialSection({ courseId ,course}) {
             <h2 className="text-2xl font-bold text-center mb-5">Study Material</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
                 {MaterialList.map((item, index) => (
-                    <Link key={index} href={`/course/${courseId}/${item.path}` }>
-                        <MaterialCardItem  item={item} course={course} studyTypeContent={studyTypeContent} />
-                    </Link>
+                        <MaterialCardItem key={index}  item={item} course={course} courseId={courseId} studyTypeContent={studyTypeContent} />
                 ))}
             </div>
         </div>

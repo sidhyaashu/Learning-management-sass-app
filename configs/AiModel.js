@@ -83,3 +83,21 @@ export const generateStudyTypeContentAiModel = model.startChat({
         },
     ],
 })
+
+export const generateQuizAiModel = model.startChat({
+    generationConfig,
+    history: [
+        {
+            role: "user",
+            parts: [
+                {text: "Generate Quiz on topic: Flutter fundamentals,user Interface (ui), Development, Basic App Navigation with Question and options along with answer in json format (Maximum 10)\n"},
+            ],
+        },
+        {
+            role: "model",
+            parts: [
+                {text: "```json\n{\n  \"quizTitle\": \"Flutter Fundamentals, UI, and Basic Navigation\",\n  \"questions\": [\n    {\n      \"question\": \"What is the primary language used for building Flutter applications?\",\n      \"options\": [\"Java\", \"Kotlin\", \"Swift\", \"Dart\"],\n      \"answer\": \"Dart\"\n    },\n    {\n      \"question\": \"Which widget is the root of most Flutter UI hierarchies?\",\n      \"options\": [\"Container\", \"Row\", \"Column\", \"MaterialApp\"],\n      \"answer\": \"MaterialApp\"\n    },\n    {\n      \"question\": \"What is the purpose of a StatefulWidget in Flutter?\",\n      \"options\": [\"To create static UI elements\", \"To manage mutable UI state\", \"To define layout structures\", \"To handle user input\"],\n      \"answer\": \"To manage mutable UI state\"\n    },\n    {\n      \"question\": \"Which widget is used to arrange children in a horizontal row?\",\n      \"options\": [\"Column\", \"Row\", \"Stack\", \"Container\"],\n      \"answer\": \"Row\"\n    },\n    {\n      \"question\": \"What does the `BuildContext` provide in a Flutter widget?\",\n      \"options\": [\"The app's theme\", \"Access to the widget tree\", \"User input data\", \"Network connectivity status\"],\n      \"answer\": \"Access to the widget tree\"\n    },\n    {\n      \"question\": \"How do you navigate to a new route in Flutter using `Navigator`?\",\n      \"options\": [\"`Navigator.pushNamed(context, '/routeName')`\", \"`Navigator.pop(context)`\", \"`Navigator.pushReplacementNamed(context, '/routeName')`\", \"All of the above\"],\n      \"answer\": \"All of the above\"\n    },\n    {\n      \"question\": \"What widget is typically used to display a list of items in Flutter?\",\n      \"options\": [\"ListView\", \"GridView\", \"Column\", \"Row\"],\n      \"answer\": \"ListView\"\n    },\n    {\n      \"question\": \"What is the hot reload feature in Flutter?\",\n      \"options\": [\"A way to rebuild the entire app from scratch\", \"A feature that allows you to instantly see code changes in the running app\", \"A debugging tool for finding memory leaks\", \"A method for optimizing app performance\"],\n      \"answer\": \"A feature that allows you to instantly see code changes in the running app\"\n    },\n    {\n      \"question\": \"Which widget is used for creating a simple button in Flutter?\",\n      \"options\": [\"IconButton\", \"TextButton\", \"ElevatedButton\", \"All of the above\"],\n      \"answer\": \"All of the above\"\n    },\n    {\n      \"question\": \"What does `Scaffold` provide in a Flutter app?\",\n      \"options\": [\"A basic layout structure with AppBar, body, and bottomNavigationBar\", \"A way to manage app state\", \"A method for handling user input\", \"A mechanism for network requests\"],\n      \"answer\": \"A basic layout structure with AppBar, body, and bottomNavigationBar\"\n    }\n  ]\n}\n```\n"},
+            ],
+        },
+    ],
+});
