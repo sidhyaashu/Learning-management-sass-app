@@ -1,8 +1,14 @@
-# Project Name
 
-A comprehensive and modern web application stack combining cutting-edge technologies to deliver a seamless development and user experience.
 
-## 🚀 Features
+Here’s an enhanced and visually appealing version of your markdown:
+
+# 🌐 **Comprehensive Modern Web Application Stack**
+
+Delivering a **seamless development** and **user experience** with cutting-edge technologies.
+
+---
+
+## 🚀 **Features**
 
 - 🌟 **Inngest**: Simplified event-driven workflows for serverless functions.
 - 🐘 **NeonDB**: Efficient and scalable serverless PostgreSQL database.
@@ -14,32 +20,36 @@ A comprehensive and modern web application stack combining cutting-edge technolo
 - 🤖 **Gemini AI**: AI-powered features to enhance your application.
 - 🗃️ **Drizzle ORM**: Type-safe and intuitive ORM for database interactions.
 
-## 🛠️ Getting Started
+---
 
-### Prerequisites
+## 🛠️ **Getting Started**
+
+### **Prerequisites**
 
 Ensure you have the following installed:
 
 - 🖥️ [Node.js](https://nodejs.org/)
 - 📦 [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- 🗄️ PostgreSQL instance on NeonDB
+- 🗄️ A PostgreSQL instance on **NeonDB**
 
-### Installation
+---
 
-1. 🛠️ Clone the repository:
+### **Installation**
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-project.git
-   cd your-project
+   git clone https://github.com/sidhyaashu/gen-lms.git
+   cd gen-lms
    ```
 
-2. 📥 Install dependencies:
+2. **Install dependencies**:
    ```bash
    npm install
    # or
    yarn install
    ```
 
-3. ⚙️ Configure environment variables:
+3. **Configure environment variables**:  
    Create a `.env` file in the root directory and add the following:
    ```env
    NEXT_PUBLIC_STRIPE_API_KEY=your_stripe_api_key
@@ -48,7 +58,7 @@ Ensure you have the following installed:
    GEMINI_API_KEY=your_gemini_api_key
    ```
 
-4. 🚀 Run the application:
+4. **Run the application**:
    ```bash
    npm run dev
    # or
@@ -56,26 +66,32 @@ Ensure you have the following installed:
    ```
    Open your browser at [http://localhost:3000](http://localhost:3000).
 
-## 🔄 Database Management
+---
 
-Use Drizzle Kit for database migrations and management:
+## 🔄 **Database Management**
 
-- 📤 Push migrations:
+Manage your database efficiently with **Drizzle Kit**:
+
+- **Push migrations**:
   ```bash
   npx drizzle-kit generate
   npx drizzle-kit push
   ```
 
-- 🛠️ Open Drizzle Studio:
+- **Open Drizzle Studio**:
   ```bash
   npx drizzle-kit studio
   ```
-  ```bash
-   npx inngest-cli@latest dev
-  npx inngest-cli@latest dev --no-discovery -u http://localhost:3000/api/inngest
-   ```
 
-## 📂 Project Structure
+- **Run Inngest CLI**:
+  ```bash
+  npx inngest-cli@latest dev
+  npx inngest-cli@latest dev --no-discovery -u http://localhost:3000/api/inngest
+  ```
+
+---
+
+## 📂 **Project Structure**
 
 ```plaintext
 ├── public
@@ -92,9 +108,11 @@ Use Drizzle Kit for database migrations and management:
 └── README.md
 ```
 
-## 🤝 Contributing
+---
 
-Contributions are welcome! Please follow these steps:
+## 🤝 **Contributing**
+
+We welcome contributions! Follow these steps to get started:
 
 1. 🍴 Fork the repository.
 2. 🌿 Create a new branch:
@@ -111,13 +129,13 @@ Contributions are welcome! Please follow these steps:
    ```
 5. 📝 Open a Pull Request.
 
-## 📜 License
+---
 
-This project is licensed under the [MIT License](LICENSE).
+## 🌟 **Acknowledgments**
 
-## 🌟 Acknowledgments
+A big thank you to these amazing tools and platforms:
 
-- 🚀 [Inngest](https://www.inngest.com/)
+- 🌟 [Inngest](https://www.inngest.com/)
 - 🐘 [NeonDB](https://neon.tech/)
 - 💳 [Stripe](https://stripe.com/)
 - ⚛️ [Next.js](https://nextjs.org/)
@@ -129,5 +147,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ by [Asutosh Sidhya](https://github.com/sidhyaashu).
-
+### 💻 **Built with ❤️ by [Asutosh Sidhya](https://github.com/sidhyaashu)**
+```
