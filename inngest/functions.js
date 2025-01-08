@@ -108,32 +108,61 @@ export const GenerateNotes = inngest.createFunction(
 
 
 
-//Use to generate flashcard , quize and qa
+// Use to generate flashcard, quiz, and Q&A
 export const GenerateStudyTypeContent = inngest.createFunction(
-    {id: "generate-study-type-content" },
-    {event: "studyType.content"},
+    { id: "generate-study-type-content" },
+    { event: "studyType.content" },
     async ({ event, step }) => {
-        const { studyType,prompt,courseId ,recordId} = event.data;
+        const { studyType, prompt, recordId } = event.data;
 
+        console.log(studyType)
 
-            const airesult = await step.run("Generating Flashcard using AI", async () => {
-                const result = studyType === "flashcard"?
-                    await generateStudyTypeContentAiModel.sendMessage(prompt) :
-                    await generateQuizAiModel.sendMessage(prompt);
-                const aiResponse_f =JSON.parse( await result.response.text());
-                return aiResponse_f;
-            })
+        try {
+            const aiResponse_f = await step.run("Generating Content using AI", async () => {
+                let result;
 
+                // Run the appropriate AI generation model based on the study type
+                try {
+                    if (studyType === "flashcard" || studyType === "quiz" || studyType === "qa") {
+                        result = await generateStudyTypeContentAiModel.sendMessage(prompt);
+                    } else {
+                        throw new Error("Invalid study type");
+                    }
 
-        // Insert into db
+                    // Parse AI response to extract the content
+                    const aiResponse = await result.response.text();
+                    const parsedResponse = JSON.parse(aiResponse);
 
-        const dbResult = await step.run("Save result to DB", async () => {
-            const result = await db.update(STUDY_TYPE_CONTENT_TABLE).set({
-                content: FlashCardResult,
-                status:"ready"
-            }).where(eq(STUDY_TYPE_CONTENT_TABLE?.id,recordId))
+                    return parsedResponse;
+                } catch (aiError) {
+                    throw new Error(`AI generation failed: ${aiError.message}`);
+                }
+            });
 
-            return 'inserted successfully';
-        })
+            // Insert the generated content into the database
+            await step.run("Save result to DB", async () => {
+                try {
+                    const dbResult = await db.update(STUDY_TYPE_CONTENT_TABLE)
+                        .set({
+                            content: aiResponse_f,
+                            status: "ready"
+                        })
+                        .where(eq(STUDY_TYPE_CONTENT_TABLE?.id, recordId));
+
+                    if (!dbResult) {
+                        throw new Error("Failed to update the database");
+                    }
+
+                    return 'Inserted successfully';
+                } catch (dbError) {
+                    throw new Error(`Database update failed: ${dbError.message}`);
+                }
+            });
+
+        } catch (error) {
+            // Handle any errors that occurred during the process
+            console.error("Error generating study type content:", error.message);
+            return { error: `Content generation failed: ${error.message}` };
+        }
     }
-)
+);

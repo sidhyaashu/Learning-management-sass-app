@@ -5,128 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Spinner.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/courses/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/courses/route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/create/_components/SelectOption.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create/_components/SelectOption.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/create/_components/TopicInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create/_components/TopicInput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/create/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/CourseCardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/CourseCardItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/CourseList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/DashBoardHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/DashBoardHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/SideBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/SideBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/WelcomeBanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/WelcomeBanner.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Benefits.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Button.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Collaboration.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CompanyLogos.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Generating.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Heading.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Hero.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Notification.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Pricing.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PricingList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Roadmap.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Section.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Services.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Tagline.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design/Benefits.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design/Collaboration.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design/Hero.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design/Pricing.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design/Roadmap.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design/Services.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/4-small.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/card-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/card-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/card-3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/card-4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/card-5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/card-6.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/icon-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/icon-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/icon-3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/icon-4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/benefits/image-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/brainwave-symbol-white.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/brainwave-symbol.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/brainwave.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/check-02.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/check.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/chrome-cast.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/curve-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/curve-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/discord.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/figma.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/framer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/notion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/photoshop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/protopie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/raindrop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/collaboration/slack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/disc-02.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/file-02.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/gradient.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/grid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/hero/curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/hero/hero-background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/hero/robot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/home-smile.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/loading-01.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/loading.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/notification/image-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/notification/image-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/notification/image-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/notification/image-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/pause.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/play.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/plus-square.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/pricing/lines.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/pricing/stars.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/recording-01.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/recording-03.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/coins.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/done.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/image-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/image-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/image-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/image-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/roadmap/undone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/search-md.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/services/service-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/services/service-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/services/service-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/sliders-04.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/socials/discord.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/socials/facebook.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/socials/instagram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/socials/telegram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/socials/twitter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/Arrow.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/Brackets.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/ButtonGradient.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/ButtonSvg.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/ChatBubbleWing.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/ClipPath.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/MenuSvg.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/PlusSvg.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/svg/SectionSvg.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/yourlogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/generate-study-type-content/route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/generate-study-type-content/route.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/study-type/route.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/study-type/route.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/ChapterList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/ChapterList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/CourseIntroCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/CourseIntroCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/StepProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/StepProgress.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/StudyMaterialSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/StudyMaterialSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/flashcard/_components/FlashCardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/flashcard/_components/FlashCardItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/flashcard/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/flashcard/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/notes/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/notes/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inngest/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/inngest/functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +97,7 @@
       <workItem from="1736157861929" duration="10527000" />
       <workItem from="1736259489063" duration="5034000" />
       <workItem from="1736312332221" duration="2366000" />
-      <workItem from="1736330282705" duration="9058000" />
+      <workItem from="1736330282705" duration="16606000" />
     </task>
     <servers />
   </component>

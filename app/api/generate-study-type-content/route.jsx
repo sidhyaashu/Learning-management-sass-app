@@ -2,32 +2,54 @@ import {db} from "@/configs/db";
 import {STUDY_TYPE_CONTENT_TABLE} from "@/configs/schema";
 import {inngest} from "@/inngest/client";
 import {NextResponse} from "next/server";
+export async function POST(req) {
+    try {
+        const { chapters, courseId, type } = await req.json();
 
-export async function POST(req){
-    const {chapters,courseId,type}=req.json();
+        console.log("Type"+type)
 
-    const PROMPT = type ==="flashcard"?
-        "Generate the flashcard on topic : " + chapters + ", Basic App navigation in JSON format with front back content, maximum 15":
-        "Generate Quiz on topic: "+ chapters +" with Question and options along with answer in json format (Maximum 10)"
+        const PROMPT = (() => {
+            switch (type) {
+                case "flashcard":
+                    return `Generate the flashcards on topic: ${chapters}, in JSON format with front and back content (maximum 15)`;
+                case "quiz":
+                    return `Generate a quiz on topic: ${chapters} with question, options, and the answer in JSON format (maximum 10)`;
+                case "qa":
+                    return `Generate a Q&A on topic: ${chapters} with question and answer pairs in JSON format (maximum 10)`;
+                default:
+                    return `Generate content on topic: ${chapters}`;
+            }
+        })();
 
+        // Insert record and update status to 'Generating'
+        const result = await db.insert(STUDY_TYPE_CONTENT_TABLE).values({
+            courseId: courseId,
+            type: type,
+            status: 'Generating',
+        }).returning({
+            id: STUDY_TYPE_CONTENT_TABLE?.id
+        });
 
-    // insert record and update the status to generating
-    const result = await db.insert(STUDY_TYPE_CONTENT_TABLE).values({
-        courseId:courseId,
-        type:type,
+        // Trigger ingest
+        await inngest.send({
+            name: 'studyType.content',
+            studyType: type,
+            prompt: PROMPT,
+            courseId: courseId,
+            recordId: result[0].id
+        });
 
-    }).returning({
-        id:STUDY_TYPE_CONTENT_TABLE?.id
-    })
+        // You might want to update the content field later when content is generated
 
-    // Trigger ingest
-    await inngest.send({
-        name:'studyType.content',
-        studyType:type,
-        prompt:PROMPT,
-        courseId:courseId ,
-        recordId:result[0].id
-    })
-
-    return NextResponse.json(result[0]?.id)
+        return NextResponse.json({
+            id: result[0]?.id,
+            message: "Content generation started successfully.",
+            status: "Generating"
+        });
+    } catch (error) {
+        console.error("Error processing request:", error);
+        return NextResponse.json({
+            error: "Failed to start content generation. Please try again later."
+        }, { status: 500 });
+    }
 }

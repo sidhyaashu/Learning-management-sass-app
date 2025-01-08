@@ -7,7 +7,7 @@ import {NextResponse} from "next/server";
 export async function POST(req){
     const { courseId, studyType} = await req.json()
 
-    if(studyType == "ALL"){
+    if(studyType === "ALL"){
         const notes_all = await db.select().from(CHAPTER_NOTES_TABLE)
             .where(eq(CHAPTER_NOTES_TABLE?.courseId,courseId))
 
