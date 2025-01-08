@@ -4,7 +4,7 @@ import {CHAPTER_NOTES_TABLE, STUDY_MATERIAL_TABLE, STUDY_TYPE_CONTENT_TABLE, USE
 import { eq } from "drizzle-orm";
 import {
     generateFlashCardAiModel,
-    generateNotesAiModel,
+    generateNotesAiModel, generateQAAiModel,
     generateQuizAiModel,
 } from "@/configs/AiModel";
 
@@ -136,7 +136,10 @@ export const GenerateStudyTypeContent = inngest.createFunction(
                         result = await generateFlashCardAiModel.sendMessage(prompt);
                     }else if (studyType === "quiz"){
                         result = await generateQuizAiModel.sendMessage(prompt);
-                    }else{
+                    }else if(studyType === "qa"){
+                        result = await generateQAAiModel.sendMessage(prompt);
+                    }
+                    else{
                         throw new Error("Invalid study type");
                     }
 

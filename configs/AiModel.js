@@ -101,3 +101,22 @@ export const generateQuizAiModel = model.startChat({
         },
     ],
 });
+
+
+export const generateQAAiModel = model.startChat({
+    generationConfig,
+    history: [
+        {
+            role: "user",
+            parts: [
+                {text: "Generate a Q&A on topic: Flutter fundamentals,user Interface (ui), Development, Basic App Navigation with question and answer pairs in JSON format (maximum 10)"},
+            ],
+        },
+        {
+            role: "model",
+            parts: [
+                {text: "```json\n[\n  {\n    \"question\": \"What is Flutter?\",\n    \"answer\": \"Flutter is Google's UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.\"\n  },\n  {\n    \"question\": \"What are Widgets in Flutter?\",\n    \"answer\": \"Widgets are the fundamental building blocks of Flutter UI. Everything in a Flutter app is a widget, from a simple button to complex layouts.\"\n  },\n  {\n    \"question\": \"Explain the difference between StatelessWidget and StatefulWidget.\",\n    \"answer\": \"StatelessWidget represents a part of the UI that doesn't change, while StatefulWidget represents a part that can change over time in response to user interactions or other events.\"\n  },\n  {\n    \"question\": \"How do you manage the layout of widgets in Flutter?\",\n    \"answer\": \"Flutter offers various layout widgets like Row, Column, Stack, GridView, and ListView to arrange widgets in different ways, controlling their positioning and size.\"\n  },\n  {\n    \"question\": \"What is the purpose of the `BuildContext`?\",\n    \"answer\": \"BuildContext provides information about the location of a widget within the widget tree. It's used to access services and other parts of the application.\"\n  },\n  {\n    \"question\": \"How do you navigate between screens in a Flutter app?\",\n    \"answer\": \"The `Navigator` widget is used for navigation.  Methods like `Navigator.push()` push a new route onto the navigation stack, and `Navigator.pop()` removes the current route.\"\n  },\n  {\n    \"question\": \"What is a route in Flutter navigation?\",\n    \"answer\": \"A route represents a single screen or page in your application.  It's essentially a visual representation managed by the Navigator.\"\n  },\n  {\n    \"question\": \"How can you pass data between screens during navigation?\",\n    \"answer\": \"Data can be passed using the `arguments` parameter of `Navigator.push()` and retrieved from `ModalRoute.of(context).settings.arguments`.\"\n  },\n  {\n    \"question\": \"What are some common Flutter UI widgets?\",\n    \"answer\": \"Some common widgets include Text, Button, Image, Icon, Container, Scaffold, AppBar, and many more specialized widgets for different UI elements.\"\n  },\n  {\n    \"question\": \"What is the role of the `main()` function in a Flutter application?\",\n    \"answer\": \"The `main()` function is the entry point of the Flutter application.  It's where the `runApp()` function is called, which starts the application and renders the root widget.\"\n  }\n]\n```\n"},
+            ],
+        },
+    ],
+});
