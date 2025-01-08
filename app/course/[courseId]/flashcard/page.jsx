@@ -44,7 +44,7 @@ function FlashCard() {
     }, [api]);
 
     useEffect(() => {
-        GetFlashCard();
+         GetFlashCard();
     }, []);
 
     return (

@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/course/[courseId]/qa/page.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/BackButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/AiModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/configs/AiModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inngest/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/inngest/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/StepProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/StepProgress.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/StudyMaterialSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/StudyMaterialSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/flashcard/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/flashcard/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/notes/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/notes/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/qa/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/qa/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/create/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/create/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +61,7 @@
       <recent name="E:\SIDHYA\Developments\NEXT\gen-lms\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SIDHYA\Developments\NEXT\gen-lms\components" />
       <recent name="E:\SIDHYA\Developments\NEXT\gen-lms\app\course\[courseId]\flashcard\_components" />
     </key>
   </component>
@@ -92,7 +97,7 @@
       <workItem from="1736259489063" duration="5034000" />
       <workItem from="1736312332221" duration="2366000" />
       <workItem from="1736330282705" duration="16647000" />
-      <workItem from="1736358622406" duration="6966000" />
+      <workItem from="1736358622406" duration="13756000" />
     </task>
     <servers />
   </component>

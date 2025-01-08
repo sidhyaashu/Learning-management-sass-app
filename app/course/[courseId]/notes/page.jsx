@@ -20,8 +20,8 @@ function ViewNotes() {
         setNotes(result?.data || []);
     };
 
-    useEffect(() => {
-        getNotes();
+    useEffect( () => {
+         getNotes();
     }, []);
 
     return notes.length > 0 ? (

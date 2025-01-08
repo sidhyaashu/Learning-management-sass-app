@@ -30,7 +30,7 @@ function QA() {
         }
     };
 
-    useEffect(() => {
+    useEffect( () => {
         if (courseId) {
             getQA();
         }

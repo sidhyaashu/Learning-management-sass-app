@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 function Create() {
+    console.log(`Create page`)
     const router = useRouter();
     const { user } = useUser();
     const [step, setStep] = useState(0);

@@ -28,7 +28,9 @@ function DashboardLayout({ children }) {
                         extraContent={user?.fullName}
                         toggleSidebar={toggleSidebar}  // Pass toggle function
                     />
+
                 </header>
+
                 <main className="p-4">{children}</main>
             </div>
         </div>
