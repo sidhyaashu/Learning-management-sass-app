@@ -6,27 +6,27 @@ import { Button } from "@/components/ui/button";
 import TopicInput from "@/app/create/_components/TopicInput";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
-import {useUser} from "@clerk/nextjs"
-import {useRouter} from "next/navigation";
-import {toast} from "sonner";
+import { useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 function Create() {
     const router = useRouter();
-    const { user } = useUser()
+    const { user } = useUser();
     const [step, setStep] = useState(0);
-    const [formData, setFormData] = useState([])
-    const [loading,setLoading] = useState(false);
-    const handleUserInput =(fieldName,fieldValue)=>{
-        setFormData(prev=>({
-            ...prev,
-            [fieldName]:fieldValue
-        }))
-    }
+    const [formData, setFormData] = useState({});
+    const [loading, setLoading] = useState(false);
 
-    // Used to save user input and generate Ai course layout
+    const handleUserInput = (fieldName, fieldValue) => {
+        setFormData((prev) => ({
+            ...prev,
+            [fieldName]: fieldValue,
+        }));
+    };
+
     const GenerateCourseOutLine = async () => {
         if (!formData.courseType || !formData.topic) {
-            console.error("Missing required fields in formData");
+            toast.error("Please fill in all required fields.");
             return;
         }
 
@@ -34,56 +34,73 @@ function Create() {
 
         try {
             setLoading(true);
-            const result = await axios.post("/api/generate-course-outline", {
+            await axios.post("/api/generate-course-outline", {
                 courseId,
                 ...formData,
                 createdBy: user?.primaryEmailAddress?.emailAddress,
             });
             setLoading(false);
-            router.replace("/dashboard")
-
-            toast("Your Course Content is Generating, Please Wait.")
+            router.replace("/dashboard");
+            toast.success("Your Course Content is Generating. Please Wait.");
         } catch (error) {
-            console.error("API Call Error:", error.response?.data || error.message);
+            setLoading(false);
+            toast.error(error.response?.data || error.message);
         }
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#6C63FF] via-[#6B5B95] to-[#FF6F91] flex flex-col items-center justify-center p-6">
-            <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-10 ">
-                <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 text-center mb-6">
+        <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-6">
+            <div className="max-w-4xl w-full bg-gray-800 rounded-3xl shadow-2xl p-10">
+                <h2 className="text-4xl font-extrabold text-center text-gray-100 mb-6">
                     Create Your Personalized Study Companion 🌟
                 </h2>
-                <p className="text-lg text-gray-700 text-center mb-10">
-                    Welcome to our AI-powered platform! Start creating your tailored
-                    learning resources for exams, coding prep, interviews, and more.
+                <p className="text-lg text-gray-400 text-center mb-10">
+                    Start creating tailored learning resources for exams, coding prep,
+                    interviews, and more with our AI-powered platform.
                 </p>
-                <div>{step === 0 ? <SelectOption selectedStudyType={(value)=>handleUserInput('courseType',value)} /> : <TopicInput setTopic={(value)=>handleUserInput('topic',value)} setDifficulty={(value)=>handleUserInput('difficualtyLevel',value)}/>}</div>
+
+                <div className="transition-all duration-300">
+                    {step === 0 ? (
+                        <SelectOption
+                            selectedStudyType={(value) => handleUserInput("courseType", value)}
+                        />
+                    ) : (
+                        <TopicInput
+                            setTopic={(value) => handleUserInput("topic", value)}
+                            setDifficulty={(value) => handleUserInput("difficultyLevel", value)}
+                        />
+                    )}
+                </div>
             </div>
 
             {/* Button Container */}
             <div className="flex justify-between items-center w-full max-w-4xl mt-16 space-x-4">
                 <Button
-                    className="flex-1 py-3 px-6 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold text-lg rounded-full shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none"
+                    className={`flex-1 py-3 px-6 bg-gray-700 text-white font-semibold text-lg rounded-full shadow-md hover:bg-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 
+                    ${step === 0 ? "opacity-50 cursor-not-allowed" : "hover:scale-105"}`}
                     onClick={() => setStep((prev) => Math.max(prev - 1, 0))}
-                    disabled={step === 0} // Disable the "Previous" button on the first step
+                    disabled={step === 0}
                 >
                     Previous
                 </Button>
-                {
-                    step === 0 ? <Button
-                        className="flex-1 py-3 px-6 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold text-lg rounded-full shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none"
+
+                {step === 0 ? (
+                    <Button
+                        className="flex-1 py-3 px-6 bg-blue-600 text-white font-semibold text-lg rounded-full shadow-md hover:bg-blue-500 hover:scale-105 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300"
                         onClick={() => setStep((prev) => prev + 1)}
+                        disabled={!formData.courseType}
                     >
                         Next
-                    </Button> : <Button
-                        className="flex-1 py-3 px-6 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold text-lg rounded-full shadow-md hover:shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none"
+                    </Button>
+                ) : (
+                    <Button
+                        className="flex-1 py-3 px-6 bg-green-600 text-white font-semibold text-lg rounded-full shadow-md hover:bg-green-500 hover:scale-105 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all duration-300"
                         onClick={GenerateCourseOutLine}
                         disabled={loading}
                     >
-                        Generate
+                        {loading ? "Generating..." : "Generate"}
                     </Button>
-                }
+                )}
             </div>
         </div>
     );

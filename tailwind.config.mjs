@@ -9,6 +9,14 @@ export default {
   theme: {
   	extend: {
   		colors: {
+			githubGray: {
+				900: "#0d1117",
+				800: "#161b22",
+				700: "#21262d",
+				600: "#30363d",
+				400: "#8b949e",
+				200: "#c9d1d9",
+			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

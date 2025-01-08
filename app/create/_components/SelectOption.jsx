@@ -3,54 +3,34 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function SelectOption({selectedStudyType}) {
+function SelectOption({ selectedStudyType }) {
     const Options = [
-        {
-            name: "Exam Preparation",
-            icon: "/exam_1.png",
-        },
-        {
-            name: "Job Interview",
-            icon: "/job.png",
-        },
-        {
-            name: "Practice",
-            icon: "/practice.png",
-        },
-        {
-            name: "Coding Preparation",
-            icon: "/code.png",
-        },
-        {
-            name: "Other",
-            icon: "/knowledge.png",
-        },
+        { name: "Exam Preparation", icon: "/exam_1.png" },
+        { name: "Job Interview", icon: "/job.png" },
+        { name: "Practice", icon: "/practice.png" },
+        { name: "Coding Preparation", icon: "/code.png" },
+        { name: "Other", icon: "/knowledge.png" },
     ];
 
     const [selectedOption, setSelectedOption] = useState(null);
 
-    const handleOptionClick = (optionName) => {
-        // Toggle selection to allow deselecting the option
-        setSelectedOption((prev) => (prev === optionName ? null : optionName));
-    };
-
     return (
         <div className="space-y-8">
-            <h2 className="text-2xl font-semibold text-gray-800 text-center">
+            <h2 className="text-2xl font-semibold text-gray-100 text-center">
                 What are you preparing for?
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-5 gap-6">
                 {Options.map((option, index) => (
                     <div
                         key={index}
                         className={`group flex flex-col items-center justify-center p-6 rounded-2xl shadow-lg transform transition-all duration-300 cursor-pointer 
-              ${
+                        ${
                             selectedOption === option.name
-                                ? "bg-gradient-to-tr from-purple-400 to-pink-400 shadow-xl scale-105"
-                                : "bg-gradient-to-tr from-purple-100 to-pink-100 hover:shadow-xl hover:scale-105"
+                                ? "bg-blue-600 scale-105 shadow-2xl"
+                                : "bg-gray-700 hover:bg-blue-500"
                         }`}
                         onClick={() => {
-                            handleOptionClick(option.name);
+                            setSelectedOption(option.name);
                             selectedStudyType(option.name);
                         }}
                     >
@@ -67,7 +47,7 @@ function SelectOption({selectedStudyType}) {
                             className={`text-lg font-medium ${
                                 selectedOption === option.name
                                     ? "text-white"
-                                    : "text-gray-900 group-hover:text-purple-700"
+                                    : "text-gray-300 group-hover:text-white"
                             } transition-colors duration-300`}
                         >
                             {option.name}
