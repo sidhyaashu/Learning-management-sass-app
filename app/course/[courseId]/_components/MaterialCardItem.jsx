@@ -10,7 +10,6 @@ function MaterialCardItem({ item, studyTypeContent, course, courseId, type })
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
-     console.log(type)
 
     const GenerateContent = async () => {
         setLoading(true);

@@ -2,7 +2,11 @@ import { inngest } from "./client";
 import { db } from "@/configs/db";
 import {CHAPTER_NOTES_TABLE, STUDY_MATERIAL_TABLE, STUDY_TYPE_CONTENT_TABLE, USER_TABLE} from "@/configs/schema";
 import { eq } from "drizzle-orm";
-import {generateNotesAiModel, generateQuizAiModel, generateStudyTypeContentAiModel} from "@/configs/AiModel";
+import {
+    generateFlashCardAiModel,
+    generateNotesAiModel,
+    generateQuizAiModel,
+} from "@/configs/AiModel";
 
 export const CreateNewUser = inngest.createFunction(
     { id: "create-user" },
@@ -113,9 +117,14 @@ export const GenerateStudyTypeContent = inngest.createFunction(
     { id: "generate-study-type-content" },
     { event: "studyType.content" },
     async ({ event, step }) => {
+
+        console.log(event)
         const { studyType, prompt, recordId } = event.data;
 
-        console.log(studyType)
+        console.log("STUDY TYPE ++++++++++++++++ "+ studyType)
+        console.log("PROMPT---------------------------------------------------"+prompt)
+        console.log("RECORD ID --------------------------------------------"+recordId);
+
 
         try {
             const aiResponse_f = await step.run("Generating Content using AI", async () => {
@@ -123,9 +132,11 @@ export const GenerateStudyTypeContent = inngest.createFunction(
 
                 // Run the appropriate AI generation model based on the study type
                 try {
-                    if (studyType === "flashcard" || studyType === "quiz" || studyType === "qa") {
-                        result = await generateStudyTypeContentAiModel.sendMessage(prompt);
-                    } else {
+                    if(studyType === "flashcard"){
+                        result = await generateFlashCardAiModel.sendMessage(prompt);
+                    }else if (studyType === "quiz"){
+                        result = await generateQuizAiModel.sendMessage(prompt);
+                    }else{
                         throw new Error("Invalid study type");
                     }
 

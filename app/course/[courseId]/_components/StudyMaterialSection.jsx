@@ -18,8 +18,11 @@ function StudyMaterialSection({ courseId, course }) {
         setLoading(true);
         const result = await axios.post('/api/study-type', { courseId, studyType: 'ALL' });
         setStudyTypeContent(result?.data);
+        console.log(result?.data)
         setLoading(false);
     };
+
+
 
     useEffect(() => {
         GetStudyMaterial();

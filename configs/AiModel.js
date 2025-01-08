@@ -66,7 +66,7 @@ export const courseOutlineAIModel = model.startChat({
     });
 
 
-export const generateStudyTypeContentAiModel = model.startChat({
+export const generateFlashCardAiModel = model.startChat({
     generationConfig,
     history: [
         {

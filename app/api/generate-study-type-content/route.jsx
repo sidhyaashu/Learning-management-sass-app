@@ -6,8 +6,6 @@ export async function POST(req) {
     try {
         const { chapters, courseId, type } = await req.json();
 
-        console.log("Type"+type)
-
         const PROMPT = (() => {
             switch (type) {
                 case "flashcard":
@@ -21,6 +19,8 @@ export async function POST(req) {
             }
         })();
 
+
+
         // Insert record and update status to 'Generating'
         const result = await db.insert(STUDY_TYPE_CONTENT_TABLE).values({
             courseId: courseId,
@@ -33,10 +33,12 @@ export async function POST(req) {
         // Trigger ingest
         await inngest.send({
             name: 'studyType.content',
-            studyType: type,
-            prompt: PROMPT,
-            courseId: courseId,
-            recordId: result[0].id
+            data:{
+                studyType: type,
+                prompt: PROMPT,
+                courseId: courseId,
+                recordId: result[0].id
+            }
         });
 
         // You might want to update the content field later when content is generated
