@@ -5,6 +5,88 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/configs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/4-small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/card-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/card-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/card-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/card-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/card-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/card-6.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/icon-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/icon-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/icon-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/icon-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/benefits/image-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/brainwave-symbol-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/brainwave-symbol.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/brainwave.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/check-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/check.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/chrome-cast.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/curve-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/curve-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/discord.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/figma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/framer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/notion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/photoshop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/protopie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/raindrop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/collaboration/slack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/disc-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/file-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/grid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/hero/curve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/hero/hero-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/hero/robot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/home-smile.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/loading-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/loading.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/notification/image-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/notification/image-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/notification/image-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/notification/image-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pause.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/play.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/plus-square.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pricing/lines.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/pricing/stars.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/recording-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/recording-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/coins.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/done.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/image-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/image-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/image-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/image-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/roadmap/undone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/search-md.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/services/service-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/services/service-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/services/service-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/sliders-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/socials/discord.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/socials/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/socials/instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/socials/telegram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/socials/twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/Arrow.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/Brackets.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/ButtonGradient.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/ButtonSvg.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/ChatBubbleWing.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/ClipPath.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/MenuSvg.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/PlusSvg.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/svg/SectionSvg.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/yourlogo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
@@ -29,25 +111,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sidhya&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/SIDHYA/Developments/NEXT/gen-lms/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "sidhya",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/SIDHYA/Developments/NEXT/gen-lms/configs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\SIDHYA\Developments\NEXT\gen-lms\configs" />
+      <recent name="E:\SIDHYA\Developments\NEXT\gen-lms" />
+      <recent name="E:\SIDHYA\Developments\NEXT\gen-lms\" />
       <recent name="E:\SIDHYA\Developments\NEXT\gen-lms\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -83,7 +168,8 @@
       <workItem from="1736103257044" duration="5790000" />
       <workItem from="1736133820407" duration="12200000" />
       <workItem from="1736157861929" duration="10527000" />
-      <workItem from="1736259489063" duration="4880000" />
+      <workItem from="1736259489063" duration="5034000" />
+      <workItem from="1736312332221" duration="2303000" />
     </task>
     <servers />
   </component>
