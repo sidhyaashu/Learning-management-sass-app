@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import DeveloperCarousel from "@/components/DeveloperCarousel";
 import Footer from "@/components/Footer";
-import Download from "@/components/Download";
+// import Download from "@/components/Download";
 
 const App = () => {
     return (
@@ -11,7 +11,7 @@ const App = () => {
             <LandingDashBoard/>
             <HeroSection/>
             <FeaturesSection/>
-            <Download/>
+            {/*<Download/>*/}
             <DeveloperCarousel/>
             <Footer/>
         </div>

@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/DeveloperCarousel.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Download.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/FeaturesSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/HeroSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/LandingDashBoard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/hero-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ss1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Download.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Download.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,23 +29,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "sidhya",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/SIDHYA/Developments/NEXT/gen-lms/constants",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sidhya&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/SIDHYA/Developments/NEXT/gen-lms/constants&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\SIDHYA\Developments\NEXT\gen-lms\constants" />
@@ -100,7 +92,8 @@
       <workItem from="1736312332221" duration="2366000" />
       <workItem from="1736330282705" duration="16647000" />
       <workItem from="1736358622406" duration="13807000" />
-      <workItem from="1736402610118" duration="6691000" />
+      <workItem from="1736402610118" duration="6741000" />
+      <workItem from="1736448002701" duration="1377000" />
     </task>
     <servers />
   </component>

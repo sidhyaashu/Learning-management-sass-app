@@ -69,21 +69,12 @@ function MaterialCardItem({ item, studyTypeContent, course, courseId }) {
                     />
                     <h2 className="font-bold text-lg text-white">{item.name}</h2>
                     <p className="text-sm text-gray-400">{item.description}</p>
-                    {isActive ? (
-                        <button
-                            onClick={handleView}
-                            className="mt-2 bg-green-500 text-white py-1 px-4 rounded hover:bg-green-600"
-                        >
-                            View
-                        </button>
-                    ) : (
-                        <button
-                            onClick={GenerateContent}
-                            className="mt-2 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600"
-                        >
-                            Generate
-                        </button>
-                    )}
+                    <button
+                        onClick={GenerateContent}
+                        className="mt-2 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600"
+                    >
+                        Generate
+                    </button>
                 </>
             )}
         </div>
