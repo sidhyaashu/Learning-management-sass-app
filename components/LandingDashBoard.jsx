@@ -12,7 +12,7 @@ function LandingDashBoard({ title }) {
 
     const handleLogin = () => {
         setLoading(true);
-        router.push("/login");
+        router.push("/sign-in");
     };
 
     const handleGoToDashboard = () => {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, Shield, UserCircle, LogOut, Settings } from "lucide-react";
+import { LayoutDashboard, UserCircle, LogOut, Settings } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Progress } from "@/components/ui/progress";
@@ -13,11 +13,6 @@ function SideBar({ isCollapsed }) {
             name: "Dashboard",
             icon: LayoutDashboard,
             path: "/dashboard",
-        },
-        {
-            name: "Upgrade",
-            icon: Shield,
-            path: "/dashboard/upgrade",
         },
         {
             name: "Profile",

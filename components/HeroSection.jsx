@@ -22,16 +22,13 @@ export default function HeroSection() {
             <Spinner2 show={loading} />
             <section
                 className="relative bg-gray-900 text-gray-100 min-h-screen flex flex-col justify-center items-center"
-                aria-label="Hero Section"
             >
                 {/* Animated Background */}
                 <div
                     className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-black animate-pulse"
-                    aria-hidden="true"
                 ></div>
                 <div
                     className="absolute inset-0 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 opacity-20 blur-2xl mix-blend-overlay"
-                    aria-hidden="true"
                 ></div>
 
                 {/* Content */}
@@ -49,7 +46,6 @@ export default function HeroSection() {
                         <button
                             onClick={navigateToDashboard}
                             className="cursor-pointer inline-block px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-gray-900 font-semibold rounded-lg shadow-lg transform hover:scale-110 hover:shadow-xl transition-transform"
-                            role="button"
                         >
                             Get Started with Generative AI
                         </button>
@@ -65,7 +61,6 @@ export default function HeroSection() {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
                     >
                         <path
                             strokeLinecap="round"
