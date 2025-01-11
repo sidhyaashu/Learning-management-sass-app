@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/Spinner2.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/course/[courseId]/_components/MaterialCardItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Download.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Download.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DeveloperCarousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DeveloperCarousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Download.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/FeaturesSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/FeaturesSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeroSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LandingDashBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LandingDashBoard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;sidhya&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/SIDHYA/Developments/NEXT/gen-lms/constants&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/LIC_DEV/WS/github-copilot-intellij-1.5.30-242.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -94,6 +99,9 @@
       <workItem from="1736358622406" duration="13807000" />
       <workItem from="1736402610118" duration="6741000" />
       <workItem from="1736448002701" duration="1377000" />
+      <workItem from="1736451970828" duration="221000" />
+      <workItem from="1736452217017" duration="276000" />
+      <workItem from="1736565953609" duration="4171000" />
     </task>
     <servers />
   </component>

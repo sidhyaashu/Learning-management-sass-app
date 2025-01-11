@@ -74,14 +74,7 @@ function FeaturesSection() {
             </div>
 
             {/* Call-to-Action */}
-            <div className="text-center mt-16">
-                <a
-                    href="#"
-                    className="inline-block px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-gray-900 font-semibold rounded-lg shadow-lg transform hover:scale-110 hover:shadow-xl transition-transform"
-                >
-                    Get Started with Generative AI
-                </a>
-            </div>
+
         </section>
     );
 }

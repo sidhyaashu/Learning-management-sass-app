@@ -1,42 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Menu } from "lucide-react";
 import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
-function LandingDashBoard({ title, toggleSidebar }) {
+function LandingDashBoard({ title }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const router = useRouter();
+    const [loading, setLoading] = useState(false);
 
     const handleLogin = () => {
+        setLoading(true);
         router.push("/login");
     };
 
     const handleGoToDashboard = () => {
+        setLoading(true);
         router.push("/dashboard");
     };
 
+    // Close menu on route change
+    useEffect(() => {
+        const handleRouteChange = () => setMenuOpen(false);
+        router.events?.on("routeChangeStart", handleRouteChange);
+
+        return () => {
+            router.events?.off("routeChangeStart", handleRouteChange);
+        };
+    }, [router]);
+
     return (
-        <header
-            className="p-4 shadow-md bg-gray-800 text-gray-100 flex justify-between items-center"
-            aria-label="Dashboard Header"
-        >
+        <header className="p-4 shadow-md bg-gray-800 text-gray-100 flex justify-between items-center">
             {/* Left Section: Logo and Title */}
-            <div
-                className="flex items-center space-x-4 cursor-pointer"
-                onClick={() => router.push("/")}
-            >
-                <img
-                    src="/logo.svg"
-                    alt="Logo"
-                    className="w-8 h-8 rounded-full"
-                />
-                {title && (
-                    <h1 className="text-xl font-bold tracking-wide text-gray-100">
-                        {title}
-                    </h1>
-                )}
+            <div className="flex items-center space-x-4 cursor-pointer" onClick={() => router.push("/")}>
+                <img src="/logo.svg" alt="Logo" className="w-8 h-8 rounded-full" />
+                {title && <h1 className="text-xl font-bold tracking-wide text-gray-100">{title}</h1>}
             </div>
 
             {/* Right Section: Menu for Desktop */}
@@ -64,63 +63,58 @@ function LandingDashBoard({ title, toggleSidebar }) {
 
             {/* Hamburger Menu for Tablet and Mobile */}
             <div className="md:hidden">
-                <button
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    className="text-gray-400 hover:text-white"
-                >
+                <button onClick={() => setMenuOpen(!menuOpen)} className="text-gray-400 hover:text-white">
                     <Menu className="w-6 h-6" />
                 </button>
             </div>
 
             {/* Sidebar Menu */}
             {menuOpen && (
-                <div className="absolute top-14 right-4 bg-gray-800 shadow-lg rounded-md w-48">
+                <div className="absolute top-16 right-4 bg-gray-800 shadow-lg rounded-md w-48 z-50">
                     <ul className="text-gray-100">
                         <li className="border-b border-gray-700 p-2 hover:bg-gray-700">
-                            <button
-                                onClick={() => {
-                                    setMenuOpen(false);
-                                    router.push("/");
-                                }}
-                                className="w-full text-left"
-                            >
-                                Home
+                            <button onClick={handleGoToDashboard} className="w-full text-left">
+                                Dashboard
                             </button>
                         </li>
                         <SignedOut>
                             <li className="border-b border-gray-700 p-2 hover:bg-gray-700">
-                                <button
-                                    onClick={() => {
-                                        setMenuOpen(false);
-                                        handleLogin();
-                                    }}
-                                    className="w-full text-left"
-                                >
+                                <button onClick={handleLogin} className="w-full text-left">
                                     Login
                                 </button>
                             </li>
                         </SignedOut>
                         <SignedIn>
                             <li className="border-b border-gray-700 p-2 hover:bg-gray-700">
-                                <button
-                                    onClick={() => {
-                                        setMenuOpen(false);
-                                        handleGoToDashboard();
-                                    }}
-                                    className="w-full text-left"
-                                >
+                                <button onClick={handleGoToDashboard} className="w-full text-left">
                                     Go to Dashboard
                                 </button>
                             </li>
                             <li className="p-2 hover:bg-gray-700">
-                                <UserButton afterSignOutUrl="/" />
+                                <UserButton />
                             </li>
                         </SignedIn>
                     </ul>
                 </div>
             )}
+
+            {/* Spinner */}
+            {loading && <Spinner show={loading} />}
         </header>
     );
 }
+
+const Spinner = ({ show }) => {
+    if (!show) return null;
+
+    return (
+        <div className="fixed inset-0 bg-white/80 backdrop-blur-md flex items-center justify-center z-50" style={{ animation: "fadeIn 0.3s ease-in-out" }}>
+            <div
+                className="h-12 w-12 border-4 border-t-blue-500 border-t-4 rounded-full animate-spin"
+                style={{ borderColor: "rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2) blue rgba(0, 0, 0, 0.2)" }}
+            ></div>
+        </div>
+    );
+};
 
 export default LandingDashBoard;
