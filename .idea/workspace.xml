@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b34ec28e-3a24-411b-97f5-5be35fb7072f" name="Changes" comment="landing">
-      <change beforePath="$PROJECT_DIR$/components/HeroSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LandingDashBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LandingDashBoard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/_components/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/_components/CourseList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,7 @@
       <workItem from="1736448002701" duration="1377000" />
       <workItem from="1736451970828" duration="221000" />
       <workItem from="1736452217017" duration="276000" />
-      <workItem from="1736565953609" duration="4873000" />
+      <workItem from="1736565953609" duration="5265000" />
     </task>
     <task id="LOCAL-00001" summary="landing">
       <option name="closed" value="true" />
