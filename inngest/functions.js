@@ -1,6 +1,6 @@
 import { inngest } from "./client";
 import { db } from "@/configs/db";
-import {CHAPTER_NOTES_TABLE, STUDY_MATERIAL_TABLE, STUDY_TYPE_CONTENT_TABLE, USER_TABLE} from "@/configs/schema";
+import { CHAPTER_NOTES_TABLE, STUDY_MATERIAL_TABLE, STUDY_TYPE_CONTENT_TABLE, USER_TABLE } from "@/configs/schema";
 import { eq } from "drizzle-orm";
 import {
     generateFlashCardAiModel,
@@ -50,37 +50,34 @@ export const GenerateNotes = inngest.createFunction(
     async ({ event, step }) => {
         const { course } = event.data;
 
-        console.log(`Even data from genarate notes 1 : ${course}`);
+        console.log(`Event data from generate notes: ${course}`);
 
         const courseId = course?.resp?.courseId;
-        console.log(`Course ID notes 2 : ${courseId}`);
+        console.log(`Course ID: ${courseId}`);
 
         // Generate notes for each chapter
         const notesResult = await step.run("Generate Chapter Notes", async () => {
             try {
                 const chapters = course?.resp?.courseLayout?.chapters;
 
-                console.log(chapters);
+                if (!chapters) {
+                    throw new Error("No chapters found in the course layout");
+                }
 
-                // if (!chapters) {
-                //     throw new Error("No chapters found in the course layout");
-                // }
+                let index = 0;
+                await Promise.all(chapters.map(async (chapter) => {
+                    const PROMPT = `You are a good Assistant must follow my instruction. First, generate material detailed content for the provided chapter. Make sure to include all topic points in the content, make sure to give content in HTML format and also inline style (do not add HTML head, body, title tags), and must follow the output in HTML format. The chapters: ${JSON.stringify(chapter)}`;
 
-                    let index = 0
-                    chapters.forEach(async(chapter) => {
-                        const PROMPT = `You are a good Assistant must follow my instruction. first Generate material detailed content for the provided chapter. Make sure to Include all topic points in the content, make sure to give content in HTML format and also inline style (Do not add HTML Head, Body, Title tags) and must must follow the output willbe in html format. The chapters : ${JSON.stringify(chapter)}`;
+                    const result = await generateNotesAiModel.sendMessage(PROMPT);
+                    const aiResponse = await result.response.text();
 
-                        const result = await generateNotesAiModel.sendMessage(PROMPT);
-                        const aiResponse = await result.response.text();
-
-                        await db.insert(CHAPTER_NOTES_TABLE).values({
-                            chapterId: index,
-                            courseId,
-                            notes: aiResponse,
-                        });
-                        index = index + 1;
-                    })
-
+                    await db.insert(CHAPTER_NOTES_TABLE).values({
+                        chapterId: index,
+                        courseId,
+                        notes: aiResponse,
+                    });
+                    index++;
+                }));
 
                 return "Chapter notes generated successfully";
             } catch (error) {
@@ -110,21 +107,17 @@ export const GenerateNotes = inngest.createFunction(
     }
 );
 
-
-
 // Use to generate flashcard, quiz, and Q&A
 export const GenerateStudyTypeContent = inngest.createFunction(
     { id: "generate-study-type-content" },
     { event: "studyType.content" },
     async ({ event, step }) => {
 
-        console.log(event)
         const { studyType, prompt, recordId } = event.data;
 
-        console.log("STUDY TYPE ++++++++++++++++ "+ studyType)
-        console.log("PROMPT---------------------------------------------------"+prompt)
-        console.log("RECORD ID --------------------------------------------"+recordId);
-
+        console.log("STUDY TYPE ++++++++++++++++ " + studyType);
+        console.log("PROMPT---------------------------------------------------" + prompt);
+        console.log("RECORD ID --------------------------------------------" + recordId);
 
         try {
             const aiResponse_f = await step.run("Generating Content using AI", async () => {
@@ -132,14 +125,13 @@ export const GenerateStudyTypeContent = inngest.createFunction(
 
                 // Run the appropriate AI generation model based on the study type
                 try {
-                    if(studyType === "flashcard"){
+                    if (studyType === "flashcard") {
                         result = await generateFlashCardAiModel.sendMessage(prompt);
-                    }else if (studyType === "quiz"){
+                    } else if (studyType === "quiz") {
                         result = await generateQuizAiModel.sendMessage(prompt);
-                    }else if(studyType === "qa"){
+                    } else if (studyType === "qa") {
                         result = await generateQAAiModel.sendMessage(prompt);
-                    }
-                    else{
+                    } else {
                         throw new Error("Invalid study type");
                     }
 
@@ -161,7 +153,7 @@ export const GenerateStudyTypeContent = inngest.createFunction(
                             content: aiResponse_f,
                             status: "ready"
                         })
-                        .where(eq(STUDY_TYPE_CONTENT_TABLE?.id, recordId));
+                        .where(eq(STUDY_TYPE_CONTENT_TABLE.id, recordId));
 
                     if (!dbResult) {
                         throw new Error("Failed to update the database");

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Spinner2 from "@/components/Spinner2";
+import Link from "next/link";
 
 export default function HeroSection() {
     const [loading, setLoading] = useState(false);
@@ -11,7 +12,7 @@ export default function HeroSection() {
     const navigateToDashboard = async () => {
         try {
             setLoading(true);
-            await router.push("/dashboard");
+            router.push("/dashboard");
         } finally {
             setLoading(false);
         }
@@ -43,12 +44,11 @@ export default function HeroSection() {
                         our cutting-edge platform.
                     </p>
                     <div className="text-center mt-16">
-                        <button
-                            onClick={navigateToDashboard}
+                        <p
                             className="cursor-pointer inline-block px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-gray-900 font-semibold rounded-lg shadow-lg transform hover:scale-110 hover:shadow-xl transition-transform"
                         >
-                            Get Started with Generative AI
-                        </button>
+                            Generative AI
+                        </p>
                     </div>
                 </div>
 

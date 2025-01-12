@@ -1,13 +1,13 @@
 import { serve } from "inngest/next";
-import {CreateNewUser, GenerateNotes, GenerateStudyTypeContent} from "@/inngest/functions";
+import { CreateNewUser, GenerateNotes, GenerateStudyTypeContent } from "@/inngest/functions";
 import { inngest } from "@/inngest/client";
 
-// Create an API that serves zero functions
+// Ensure functions are correctly imported and defined
 export const { GET, POST, PUT } = serve({
     client: inngest,
     functions: [
         CreateNewUser,
         GenerateNotes,
-        GenerateStudyTypeContent
+        GenerateStudyTypeContent  // Ensure these functions are correctly defined
     ],
 });

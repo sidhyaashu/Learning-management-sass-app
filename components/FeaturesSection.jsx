@@ -8,20 +8,17 @@ function FeaturesSection() {
             title: "AI-Generated Notes",
             description:
                 "Automatically create detailed and personalized study notes with just a click.",
-            image: "/ss1.png", // Replace with actual image path
-        },
+            image: "/studymaterial.png",         },
         {
             title: "Flashcards & Quizzes",
             description:
                 "Generate interactive flashcards and quizzes to test and reinforce your knowledge.",
-            image: "/ss1.png", // Replace with actual image path
-        },
+            image: "/quiz-copy.png",         },
         {
             title: "Q&A Sessions",
             description:
                 "Get precise answers to your queries and engage in AI-driven Q&A sessions.",
-            image: "/ss1.png", // Replace with actual image path
-        },
+            image: "/dashboard.png",         },
     ];
 
     return (

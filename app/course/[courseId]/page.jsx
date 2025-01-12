@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import CourseIntroCard from "@/app/course/[courseId]/_components/CourseIntroCard";
@@ -11,12 +11,13 @@ function ViewCourse() {
     const { courseId } = useParams();
     const [course, setCourse] = useState();
     const [loading, setLoading] = useState(false);
+    const path = usePathname()
 
     useEffect(() => {
         if (courseId) {
             GetCourse();
         }
-    }, [courseId]);
+    }, [courseId,path]);
 
     const GetCourse = async () => {
         setLoading(true);

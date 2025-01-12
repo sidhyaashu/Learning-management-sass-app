@@ -33,7 +33,7 @@ function SideBar({ isCollapsed }) {
                     {!isCollapsed && (
                         <>
                             <Image src={"/logo.svg"} alt="LOGO" width={40} height={40}/>
-                            <h2 className="font-bold text-2xl text-gray-200">XPOLO LMS</h2>
+                            <h2 className="font-bold text-2xl text-gray-200">Gemini LMS</h2>
                         </>
                     )}
                 </div>

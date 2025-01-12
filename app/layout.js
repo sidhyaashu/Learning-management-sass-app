@@ -13,7 +13,10 @@ const outfit = Outfit({
     subsets:["latin"]
 })
 
+
 export default function RootLayout({ children }) {
+
+
   return (
       <ClerkProvider>
         <html lang="en">
