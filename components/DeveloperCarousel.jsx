@@ -4,41 +4,42 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
+
 const developers = [
     {
         name: "Asutosh Sidhya",
         department: "AI/ML",
         email: "sidhyaasutosh@gmail.com",
         linkedin: "https://www.linkedin.com/in/asutosh-sidhya/",
-        image: "https://www.pngkit.com/png/full/349-3499672_kevin-wooster-dummy-profile.png",
+        image: "/image.png",
     },
     {
         name: "Bishal Sarkar",
         department: "Frontend Development",
         email: "bishalsarkartest@gmail.com",
         linkedin: "https://www.linkedin.com/in/jane-doe/",
-        image: "https://www.pngkit.com/png/full/349-3499672_kevin-wooster-dummy-profile.png",
+        image: "/image.png",
     },
     {
         name: "Bipasha Saha",
         department: "Backend Development",
         email: "bipashasahatest@gmail.com",
         linkedin: "https://www.linkedin.com/in/john-smith/",
-        image: "https://www.pngkit.com/png/full/349-3499672_kevin-wooster-dummy-profile.png",
+        image: "/image.png",
     },
     {
         name: "Koushik Sarkar",
         department: "Next.js/Javascript",
         email: "koushiksarkartest@gmail.com",
         linkedin: "https://www.linkedin.com/in/emily-davis/",
-        image: "https://www.pngkit.com/png/full/349-3499672_kevin-wooster-dummy-profile.png",
+        image: "/image.png",
     },
     {
         name: "Shreya",
         department: "UI/UX Design",
         email: "shreyatest@gmail.com",
         linkedin: "https://www.linkedin.com/in/michael-brown/",
-        image: "https://www.pngkit.com/png/full/349-3499672_kevin-wooster-dummy-profile.png",
+        image: "/image.png",
     },
 ];
 
